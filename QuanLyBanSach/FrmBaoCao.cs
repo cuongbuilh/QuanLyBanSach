@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyBanSach
 {
-    public partial class Form2 : Form
+    public partial class FrmBaoCao : Form
     {
-        public Form2()
+        public FrmBaoCao()
         {
             InitializeComponent();
         }
