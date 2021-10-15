@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DAO\NguoiDungDAO.cs" />
     <Compile Include="entity\NguoiDung.cs" />
+    <Compile Include="entity\Quyen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view\Application.cs">
