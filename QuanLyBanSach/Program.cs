@@ -16,8 +16,6 @@ namespace QuanLyBanSach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // commentlkjdfhshdfj ns dsjfnsdj lksdsjfksdj
-            //Huy đ
             Application.Run(new view.Application());
         }
     }
