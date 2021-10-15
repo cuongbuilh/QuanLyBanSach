@@ -47,9 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\NguoiDungDAO.cs" />
+    <Compile Include="entity\DonHang.cs" />
     <Compile Include="entity\NguoiDung.cs" />
-    <Compile Include="entity\Sach.cs" />
-    <Compile Include="entity\TheLoai.cs" />
+    <Compile Include="entity\Quyen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view\Application.cs">
