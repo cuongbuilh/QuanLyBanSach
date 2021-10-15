@@ -25,7 +25,54 @@ namespace QuanLyBanSach.entity
             this.maNguoiDung = maNguoiDung;
         }
 
+        public string getTenNguoiDung()
+        {
+            return tenNguoiDung;
+        }
 
+        public void setTenNguoiDung(string tenNguoiDung)
+        {
+            this.tenNguoiDung = tenNguoiDung;
+        }
 
+        public string getemail()
+        {
+            return email;
+        }
+
+        public void setemail(string email)
+        {
+            this.email = email;
+        }
+
+        public DateTime getngayDangKy()
+        {
+            return ngayDangKy;
+        }
+
+        public void setngayDangKy(DateTime ngayDangKy)
+        {
+            this.ngayDangKy = ngayDangKy;
+        }
+
+        public string getsoDienThoai()
+        {
+            return soDienThoai;
+        }
+
+        public void setsoDienThoat(string soDienThoai)
+        {
+            this.soDienThoai = soDienThoai;
+        }
+
+        public string getdiaChi()
+        {
+            return diaChi;
+        }
+
+        public void setdiaChi(string diaChi)
+        {
+            this.diaChi = diaChi;
+        }
     }
 }
