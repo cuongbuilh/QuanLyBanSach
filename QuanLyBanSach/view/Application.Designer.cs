@@ -1,7 +1,7 @@
 ﻿
-namespace QuanLyBanSach
+namespace QuanLyBanSach.view
 {
-    partial class MDIMain
+    partial class Application
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace QuanLyBanSach
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Application));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -480,7 +480,7 @@ namespace QuanLyBanSach
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // MDIMain
+            // Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -490,8 +490,8 @@ namespace QuanLyBanSach
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Name = "MDIMain";
-            this.Text = "MDIMain";
+            this.Name = "Application";
+            this.Text = "Application";
             this.menuStrip.ResumeLayout(false);
             this.toolStrip.ResumeLayout(false);
             this.statusStrip.ResumeLayout(false);

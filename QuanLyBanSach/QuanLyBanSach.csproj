@@ -46,77 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmBaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBaoCao.Designer.cs">
-      <DependentUpon>FrmBaoCao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmDangKy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDangKy.Designer.cs">
-      <DependentUpon>FrmDangKy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDangNhap.Designer.cs">
-      <DependentUpon>FrmDangNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQLDonHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQLDonHang.Designer.cs">
-      <DependentUpon>FrmQLDonHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQLNguoiDung.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQLNguoiDung.Designer.cs">
-      <DependentUpon>FrmQLNguoiDung.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQLNhaXuatBan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQLNhaXuatBan.Designer.cs">
-      <DependentUpon>FrmQLNhaXuatBan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQLSach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQLSach.Designer.cs">
-      <DependentUpon>FrmQLSach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQLTacGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQLTacGia.Designer.cs">
-      <DependentUpon>FrmQLTacGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmTaoDonHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTaoDonHang.Designer.cs">
-      <DependentUpon>FrmTaoDonHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmTimKiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTimKiem.Designer.cs">
-      <DependentUpon>FrmTimKiem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MDIMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MDIMain.Designer.cs">
-      <DependentUpon>MDIMain.cs</DependentUpon>
-    </Compile>
+    <Compile Include="DAO\NguoiDungDAO.cs" />
+    <Compile Include="entity\NguoiDung.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MDIMain.resx">
-      <DependentUpon>MDIMain.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="view\Application.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Application.Designer.cs">
+      <DependentUpon>Application.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -126,6 +65,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\Application.resx">
+      <DependentUpon>Application.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,5 +81,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

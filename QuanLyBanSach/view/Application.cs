@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyBanSach
+namespace QuanLyBanSach.view
 {
-    public partial class MDIMain : Form
+    public partial class Application : Form
     {
         private int childFormNumber = 0;
 
-        public MDIMain()
+        public Application()
         {
             InitializeComponent();
         }
