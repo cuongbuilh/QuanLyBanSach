@@ -25,5 +25,7 @@ namespace QuanLyBanSach.entity
             this.maNguoiDung = maNguoiDung;
         }
 
+
+
     }
 }
