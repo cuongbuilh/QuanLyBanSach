@@ -34,6 +34,7 @@ namespace QuanLyBanSach.DAO
 
         public void Update(TacGia tacGia)
         {
+            // mã tác giả không được thay đổi
             // todo-list
             string prepare = "update TacGia set TenTacGia = '{0}', MoTa = '{1}' where MaTacGia = {2}";
             string sql = String.Format(prepare, tacGia.getTenTacGia(), tacGia.getMota(), tacGia.getMaTacGia());
@@ -44,7 +45,7 @@ namespace QuanLyBanSach.DAO
         public bool IsIDExists(int id)
         {
             // todo-list
-            string prepare = "select * from TacGia where id = {0}";
+            string prepare = "select * from TacGia where MaTacGia = {0}";
             string sql = String.Format(prepare, id);
             return DocDuLieu(sql).Read();
         }
