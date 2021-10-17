@@ -18,7 +18,7 @@ namespace QuanLyBanSach.DAO
 
         public void Insert(Quyen quyen)
         {
-            string prepare = "insert into TacGia values={{0},'{1}'}";
+            string prepare = "insert into Quyen values={{0},'{1}'}";
             string sql = String.Format(prepare, quyen.getMaQuyen(), quyen.getTenQuyen());
             ThucThi(sql);
         }
@@ -32,7 +32,7 @@ namespace QuanLyBanSach.DAO
         public void Update(Quyen quyen)
         {
             // todo-list
-            string prepare = "update Quyen set TenQuyen = '{0}' where MaTacGia = {1}";
+            string prepare = "update Quyen set TenQuyen = '{0}' where MaQuyen = {1}";
             string sql = String.Format(prepare, quyen.getTenQuyen(), quyen.getMaQuyen());
             ThucThi(sql);
         }
