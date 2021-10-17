@@ -46,5 +46,14 @@ namespace QuanLyBanSach.DAO
             cmd.ExecuteNonQuery();
             HuyKetNoi();
         }
+
+        public SqlDataReader DocDuLieu(string sql)
+        {
+            KetNoi_Dulieu();
+            cmd = new SqlCommand(sql);
+            SqlDataReader datareader =  cmd.ExecuteReader();
+            HuyKetNoi();
+            return datareader;
+        }
     }
 }
