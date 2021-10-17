@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyBanSach.DAO
 {
-    class DonHangDAO
+    class DonHangDAO : AbstractDAO
     {
     }
 }
