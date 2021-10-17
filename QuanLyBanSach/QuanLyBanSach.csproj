@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DAO\AbstractDAO.cs" />
     <Compile Include="DAO\ChiTietDonHangDAO.cs" />
+    <Compile Include="DAO\DangKyDAO.cs" />
     <Compile Include="DAO\DangNhapDAO.cs" />
     <Compile Include="DAO\DonHangDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
