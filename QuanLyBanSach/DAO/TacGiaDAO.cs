@@ -10,13 +10,13 @@ namespace QuanLyBanSach.DAO
 {
     class TacGiaDAO : AbstractDAO
     {
-        public DataTable getDatatable()
+        public DataTable GetDatatable()
         {
             // todo-list
             return Lay_DulieuBang("select * from TacGia");
         }
 
-        public void insert(TacGia tacGia)
+        public void Insert(TacGia tacGia)
         {
             // todo-list
             string prepare = "insert into TacGia values={{0},'{1}','{2}'}";
@@ -24,7 +24,7 @@ namespace QuanLyBanSach.DAO
             ThucThi(sql);
         }
 
-        public void delete(int maTacGia)
+        public void Delete(int maTacGia)
         {
             // todo-list
             string prepare = "delete from TacGia where MaTacGia = {0}";
@@ -32,8 +32,9 @@ namespace QuanLyBanSach.DAO
             ThucThi(sql);
         }
 
-        public void update(TacGia tacGia)
+        public void Update(TacGia tacGia)
         {
+            // mã tác giả không được thay đổi
             // todo-list
             string prepare = "update TacGia set TenTacGia = '{0}', MoTa = '{1}' where MaTacGia = {2}";
             string sql = String.Format(prepare, tacGia.getTenTacGia(), tacGia.getMota(), tacGia.getMaTacGia());
@@ -41,10 +42,10 @@ namespace QuanLyBanSach.DAO
         }
 
         // return true if exists
-        public bool isIDExists(int id)
+        public bool IsIDExists(int id)
         {
             // todo-list
-            string prepare = "select * from TacGia where id = {0}";
+            string prepare = "select * from TacGia where MaTacGia = {0}";
             string sql = String.Format(prepare, id);
             return DocDuLieu(sql).Read();
         }
