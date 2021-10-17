@@ -39,7 +39,7 @@ namespace QuanLyBanSach.DAO
         public bool IsIDExists(int id)
         {
             // todo-list
-            string prepare = "select * from Sach where id = {0}";
+            string prepare = "select * from Sach where MaSach = {0}";
             string sql = String.Format(prepare, id);
             return DocDuLieu(sql).Read();
         }
