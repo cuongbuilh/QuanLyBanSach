@@ -20,7 +20,7 @@ namespace QuanLyBanSach.DAO
         {
             // todo-list
             string prepare = "insert into TheLoai values={{0},'{1}'}";
-            string sql = String.Format(prepare, theLoai.getMaLoai(), theLoai.getTenTenTheLoai());
+            string sql = String.Format(prepare, theLoai.getMaLoai(), theLoai.getTenLoai());
             ThucThi(sql);
         }
 
@@ -44,7 +44,7 @@ namespace QuanLyBanSach.DAO
         public bool IsIDExists(int id)
         {
             // todo-list
-            string prepare = "select * from MaLoai where id = {0}";
+            string prepare = "select * from TheLoai where MaLoai = {0}";
             string sql = String.Format(prepare, id);
             return DocDuLieu(sql).Read();
         }
