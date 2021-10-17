@@ -46,19 +46,86 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ChiTietDonHangDAO.cs" />
+    <Compile Include="DAO\DangNhapDAO.cs" />
+    <Compile Include="DAO\DonHangDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
+    <Compile Include="DAO\NhaXuatBanDAO.cs" />
+    <Compile Include="DAO\QuyenDAO.cs" />
+    <Compile Include="DAO\SachDAO.cs" />
+    <Compile Include="DAO\TacGiaDAO.cs" />
+    <Compile Include="DAO\TheLoaiDAO.cs" />
+    <Compile Include="entity\ChiTietDonHang.cs" />
+    <Compile Include="entity\DangNhap.cs" />
     <Compile Include="entity\DonHang.cs" />
     <Compile Include="entity\NguoiDung.cs" />
     <Compile Include="entity\NhaXuatBan.cs" />
     <Compile Include="entity\Quyen.cs" />
+    <Compile Include="entity\Sach.cs" />
     <Compile Include="entity\TacGia.cs" />
+    <Compile Include="entity\TheLoai.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="report\testReport.cs" />
     <Compile Include="view\Application.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\Application.Designer.cs">
       <DependentUpon>Application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmDangKy.Designer.cs">
+      <DependentUpon>FrmDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmDangNhap.Designer.cs">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmNguoiDung.Designer.cs">
+      <DependentUpon>FrmNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmNhaXuatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmNhaXuatBan.Designer.cs">
+      <DependentUpon>FrmNhaXuatBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmQuyen.Designer.cs">
+      <DependentUpon>FrmQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmSach.Designer.cs">
+      <DependentUpon>FrmSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmTacGia.Designer.cs">
+      <DependentUpon>FrmTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmTaoDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmTaoDonHang.Designer.cs">
+      <DependentUpon>FrmTaoDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmTheLoai.Designer.cs">
+      <DependentUpon>FrmTheLoai.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
