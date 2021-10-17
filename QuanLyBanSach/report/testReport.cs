@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyBanSach.DAO
+namespace QuanLyBanSach.report
 {
-    class NguoiDungDAO : AbstractDAO
+    class testReport
     {
     }
 }

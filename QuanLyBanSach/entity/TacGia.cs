@@ -22,11 +22,11 @@ namespace QuanLyBanSach.entity
             this.maTacGia = maTacGia;
         }
 
-        public string getTenNXB()
+        public string getTenTacGia()
         {
             return tenTacGia;
         }
-        public void setTenNXB(string tenTacGia)
+        public void setTenTacGia(string tenTacGia)
         {
             this.tenTacGia = tenTacGia;
         }
