@@ -141,11 +141,19 @@
     <EmbeddedResource Include="view\Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="view\FrmQuyen.resx">
       <DependentUpon>FrmQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmSach.resx">
       <DependentUpon>FrmSach.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="view\FrmTacGia.resx">
+      <DependentUpon>FrmTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmTheLoai.resx">
+      <DependentUpon>FrmTheLoai.cs</DependentUpon>
+>>>>>>> a955cea412ed9de16d6377997cc579d32216011f
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
