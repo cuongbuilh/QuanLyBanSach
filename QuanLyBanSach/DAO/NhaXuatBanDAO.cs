@@ -10,13 +10,13 @@ namespace QuanLyBanSach.DAO
 {
     class NhaXuatBanDAO : AbstractDAO
     {
-        public DataTable getDatatable()
+        public DataTable GetDatatable()
         {
             // todo-list
             return Lay_DulieuBang("select * from NhaXuatBan");
         }
 
-        public void insert(NhaXuatBan nhaXuatBan)
+        public void Insert(NhaXuatBan nhaXuatBan)
         {
             // todo-list
             string prepare = "insert into NhaXuatBan values={{0},'{1}','{2}'}";
@@ -24,7 +24,7 @@ namespace QuanLyBanSach.DAO
             ThucThi(sql);
         }
 
-        public void delete(int maNXB)
+        public void Delete(int maNXB)
         {
             // todo-list
             string prepare = "delete from NhaXuatBan where MaNXB = {0}";
@@ -32,7 +32,7 @@ namespace QuanLyBanSach.DAO
             ThucThi(sql);
         }
 
-        public void update(NhaXuatBan nhaXuatBan)
+        public void Update(NhaXuatBan nhaXuatBan)
         {
             // todo-list
             string prepare = "update TacGia set TenTacGia = '{0}', MoTa = '{1}' where MaTacGia = {2}";
@@ -41,7 +41,7 @@ namespace QuanLyBanSach.DAO
         }
 
         // return true if exists
-        public bool isIDExists(int id)
+        public bool IsIDExists(int id)
         {
             // todo-list
             string prepare = "select * from TacGia where maNXB = {0}";
