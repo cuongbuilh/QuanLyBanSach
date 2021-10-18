@@ -16,5 +16,10 @@ namespace QuanLyBanSach.view
         {
             InitializeComponent();
         }
+
+        private void btn_SuaSach_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
