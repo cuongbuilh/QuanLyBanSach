@@ -44,7 +44,7 @@ namespace QuanLyBanSach.entity
         {
             this.maNguoiDung = maNguoiDung;
         }
-        public int getMaQuyenp()
+        public int getMaQuyen()
         {
             return maQuyen;
         }
