@@ -141,6 +141,12 @@
     <EmbeddedResource Include="view\Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmQuyen.resx">
+      <DependentUpon>FrmQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmSach.resx">
+      <DependentUpon>FrmSach.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
