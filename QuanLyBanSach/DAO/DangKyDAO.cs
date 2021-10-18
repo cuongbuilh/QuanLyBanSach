@@ -8,23 +8,24 @@ using QuanLyBanSach.entity;
 
 namespace QuanLyBanSach.DAO
 {
-    class DangKyDAO:AbstractDAO
+    class DangKyDAO : AbstractDAO
     {
         class DangNhapDAO : AbstractDAO
         {
             public DataTable GetDatatable()
             {
                 // todo-list
-                return Lay_DulieuBang("select * from DangNhap, NguoiDung where DangNhap.MaNguoiDung = NguoiDung.MaNguoiDung");
+                return Lay_DulieuBang(
+                    "select * from DangNhap, NguoiDung where DangNhap.MaNguoiDung = NguoiDung.MaNguoiDung");
             }
-
             public void Insert(DangNhap dangNhap, NguoiDung nguoiDung)
             {
                 // todo-list
                 NguoiDungDAO nguoiDungDAO = new NguoiDungDAO();
                 nguoiDungDAO.Insert(nguoiDung);
                 string prepare = "insert into DangNhap values={'{0}','{1}',{2},{3}}";
-                string sql = String.Format(prepare, dangNhap.getTenDangNhap(), dangNhap.getMatKhau(), dangNhap.getMaNguoiDung(), dangNhap.getMaQuyen());
+                string sql = String.Format(prepare, dangNhap.getTenDangNhap(), dangNhap.getMatKhau(),
+                    nguoiDung.getMaNguoiDung(), dangNhap.getMaQuyen());
                 ThucThi(sql);
             }
 
@@ -40,8 +41,8 @@ namespace QuanLyBanSach.DAO
             {
                 // mã tác giả không được thay đổi
                 // todo-list
-                string prepare = "update DangNhap set MatKhau = '{0}' where TenDangNhap = '{1}' and MaNguoiDung = {2} and MaQuyen = {3}";
-                string sql = String.Format(prepare, dangNhap.getMatKhau(), dangNhap.getTenDangNhap(), dangNhap.getMaNguoiDung(), dangNhap.getMaQuyen());
+                string prepare = "update DangNhap set MatKhau = '{0}' where TenDangNhap = '{1}'";
+                string sql = String.Format(prepare, dangNhap.getMatKhau(), dangNhap.getTenDangNhap());
                 ThucThi(sql);
             }
 
@@ -54,4 +55,5 @@ namespace QuanLyBanSach.DAO
                 return DocDuLieu(sql).Read();
             }
         }
+    }
 }
