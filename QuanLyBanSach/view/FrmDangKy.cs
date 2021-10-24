@@ -55,8 +55,20 @@ namespace QuanLyBanSach.view
                 MessageBox.Show(excep.Message);
             }
             
-
      
+        }
+
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_DangNhap_Click(object sender, EventArgs e)
+        {
+            FrmDangNhap dangNhap = new FrmDangNhap();
+            dangNhap.Show();
+            this.Hide();
         }
     }
 }
