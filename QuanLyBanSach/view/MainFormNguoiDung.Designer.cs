@@ -71,6 +71,9 @@ namespace QuanLyBanSach.view
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Sach = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_TaoDonHang = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_DangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -83,9 +86,6 @@ namespace QuanLyBanSach.view
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.sáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tạoĐơnHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -100,9 +100,9 @@ namespace QuanLyBanSach.view
             this.toolsMenu,
             this.windowsMenu,
             this.helpMenu,
-            this.sáchToolStripMenuItem,
-            this.tạoĐơnHàngToolStripMenuItem,
-            this.tàiKhoảnToolStripMenuItem});
+            this.mnu_Sach,
+            this.mnu_TaoDonHang,
+            this.mnu_DangXuat});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
@@ -434,6 +434,27 @@ namespace QuanLyBanSach.view
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.aboutToolStripMenuItem.Text = "&About ... ...";
             // 
+            // mnu_Sach
+            // 
+            this.mnu_Sach.Name = "mnu_Sach";
+            this.mnu_Sach.Size = new System.Drawing.Size(44, 20);
+            this.mnu_Sach.Text = "Sách";
+            this.mnu_Sach.Click += new System.EventHandler(this.mnu_Sach_Click);
+            // 
+            // mnu_TaoDonHang
+            // 
+            this.mnu_TaoDonHang.Name = "mnu_TaoDonHang";
+            this.mnu_TaoDonHang.Size = new System.Drawing.Size(92, 20);
+            this.mnu_TaoDonHang.Text = "Tạo đơn hàng";
+            this.mnu_TaoDonHang.Click += new System.EventHandler(this.mnu_TaoDonHang_Click);
+            // 
+            // mnu_DangXuat
+            // 
+            this.mnu_DangXuat.Name = "mnu_DangXuat";
+            this.mnu_DangXuat.Size = new System.Drawing.Size(73, 20);
+            this.mnu_DangXuat.Text = "Đăng xuất";
+            this.mnu_DangXuat.Click += new System.EventHandler(this.mnu_DangXuat_Click);
+            // 
             // toolStrip
             // 
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -533,24 +554,6 @@ namespace QuanLyBanSach.view
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // sáchToolStripMenuItem
-            // 
-            this.sáchToolStripMenuItem.Name = "sáchToolStripMenuItem";
-            this.sáchToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.sáchToolStripMenuItem.Text = "Sách";
-            // 
-            // tạoĐơnHàngToolStripMenuItem
-            // 
-            this.tạoĐơnHàngToolStripMenuItem.Name = "tạoĐơnHàngToolStripMenuItem";
-            this.tạoĐơnHàngToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
-            this.tạoĐơnHàngToolStripMenuItem.Text = "Tạo đơn hàng";
-            // 
-            // tàiKhoảnToolStripMenuItem
-            // 
-            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.tàiKhoảnToolStripMenuItem.Text = "Đăng xuất";
-            // 
             // MainFormNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -628,9 +631,9 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.ToolStripButton printPreviewToolStripButton;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripMenuItem sáchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tạoĐơnHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnu_Sach;
+        private System.Windows.Forms.ToolStripMenuItem mnu_TaoDonHang;
+        private System.Windows.Forms.ToolStripMenuItem mnu_DangXuat;
     }
 }
 

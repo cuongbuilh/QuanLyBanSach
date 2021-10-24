@@ -29,7 +29,7 @@ namespace QuanLyBanSach.view
         }
         private void LoadDataToForm()
         {
-            view_NguoiDung.DataSource = adoUtils.GetDataTable("select * from SINHVIEN");
+            view_NguoiDung.DataSource = adoUtils.GetDataTable("select * from NguoiDung");
         }
 
         private void BindingData()
@@ -47,7 +47,7 @@ namespace QuanLyBanSach.view
             txt_NgayDangKy.DataBindings.Add("Text", view_NguoiDung.DataSource, "NgayDangKy");
 
             txt_SoDienThoai.Clear();
-            txt_SoDienThoai.DataBindings.Add("Text", view_NguoiDung.DataSource, "SoDienThoai");
+            txt_SoDienThoai.DataBindings.Add("Text", view_NguoiDung.DataSource, "SDT");
 
             txt_DiaChi.Clear();
             txt_DiaChi.DataBindings.Add("Text", view_NguoiDung.DataSource, "DiaChi");

@@ -40,7 +40,7 @@ namespace QuanLyBanSach.view
             txt_TenNXB.DataBindings.Add("Text", view_NhaXuatBan.DataSource, "TenNXB");
 
             txt_MaNXB.Clear();
-            txt_MaNXB.DataBindings.Add("Text", view_NhaXuatBan.DataSource, "MaNhaXuatBan");
+            txt_MaNXB.DataBindings.Add("Text", view_NhaXuatBan.DataSource, "MaNXB");
 
             txt_DiaChi.Clear();
             txt_DiaChi.DataBindings.Add("Text", view_NhaXuatBan.DataSource, "DiaChi");
