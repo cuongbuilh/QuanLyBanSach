@@ -122,6 +122,9 @@
     <EmbeddedResource Include="view\Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmDangNhap.resx">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\FrmQuyen.resx">
       <DependentUpon>FrmQuyen.cs</DependentUpon>
     </EmbeddedResource>

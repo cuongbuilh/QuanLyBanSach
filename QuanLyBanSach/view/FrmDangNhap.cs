@@ -7,14 +7,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyBanSach.Utils;
+using System.Data.SqlClient;
+
 
 namespace QuanLyBanSach.view
 {
     public partial class FrmDangNhap : Form
     {
+        private ADOUtils adoUtilts;
         public FrmDangNhap()
         {
             InitializeComponent();
+            adoUtilts = new ADOUtils();
+        }
+
+        private void FrmDangNhap_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = txt_DangNhap;
+        }
+
+        private void btn_DangNhap_Click(object sender, EventArgs e)
+        {
+            string username = txt_DangNhap.Text;
+            string password = txt_MatKhau.Text;
+            string selectFomat = "select * from DANGNHAP where BINARY_CHECKSUM(TENDN) = BINARY_CHECKSUM('{0}') and BINARY_CHECKSUM(MATKHAU) = BINARY_CHECKSUM('{1}');";
+            string sql = String.Format(selectFomat, username, password);
+            bool logedIn = adoUtilts.ExcuteReader(sql).Read();
+
+            if (logedIn)
+            {
+                view.Application main = new view.Application();
+                main.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Sai thông tin đăng nhập");
+            }
+        }
+
+        private void btn_DangKy_Click(object sender, EventArgs e)
+        {
+            view.FrmDangKy dangKy = new view.FrmDangKy();
+            dangKy.Show();
+            this.Hide();
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
