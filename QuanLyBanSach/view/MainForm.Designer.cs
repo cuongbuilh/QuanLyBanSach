@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyBanSach.view
 {
-    partial class Application
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.

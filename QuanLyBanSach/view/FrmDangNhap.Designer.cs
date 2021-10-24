@@ -36,6 +36,7 @@ namespace QuanLyBanSach.view
             this.txt_MatKhau = new System.Windows.Forms.TextBox();
             this.btn_DangNhap = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
+            this.btn_DangKy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_DangNhap
@@ -88,22 +89,35 @@ namespace QuanLyBanSach.view
             // btn_DangNhap
             // 
             this.btn_DangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_DangNhap.Location = new System.Drawing.Point(147, 262);
+            this.btn_DangNhap.Location = new System.Drawing.Point(107, 262);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(127, 40);
             this.btn_DangNhap.TabIndex = 3;
             this.btn_DangNhap.Text = "Đăng nhập";
             this.btn_DangNhap.UseVisualStyleBackColor = true;
+            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
             // btn_Thoat
             // 
             this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Thoat.Location = new System.Drawing.Point(344, 262);
+            this.btn_Thoat.Location = new System.Drawing.Point(399, 262);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(127, 40);
             this.btn_Thoat.TabIndex = 3;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            // 
+            // btn_DangKy
+            // 
+            this.btn_DangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_DangKy.Location = new System.Drawing.Point(255, 262);
+            this.btn_DangKy.Name = "btn_DangKy";
+            this.btn_DangKy.Size = new System.Drawing.Size(127, 40);
+            this.btn_DangKy.TabIndex = 3;
+            this.btn_DangKy.Text = "Đăng ký";
+            this.btn_DangKy.UseVisualStyleBackColor = true;
+            this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
             // FrmDangNhap
             // 
@@ -111,6 +125,7 @@ namespace QuanLyBanSach.view
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 372);
             this.Controls.Add(this.btn_Thoat);
+            this.Controls.Add(this.btn_DangKy);
             this.Controls.Add(this.btn_DangNhap);
             this.Controls.Add(this.txt_MatKhau);
             this.Controls.Add(this.txt_DangNhap);
@@ -119,6 +134,7 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.lbl_DangNhap);
             this.Name = "FrmDangNhap";
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.FrmDangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +149,6 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.TextBox txt_MatKhau;
         private System.Windows.Forms.Button btn_DangNhap;
         private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.Button btn_DangKy;
     }
 }
