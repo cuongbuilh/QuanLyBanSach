@@ -103,5 +103,57 @@ namespace QuanLyBanSach.view
                 childForm.Close();
             }
         }
+
+        private void mnu_NguoiDung_Click(object sender, EventArgs e)
+        {
+            new FrmNguoiDung().Show();
+        }
+
+        private void mnu_PhanQuyen_Click(object sender, EventArgs e)
+        {
+            new FrmQuyen().Show();
+        }
+
+        private void mnu_Sach_Click(object sender, EventArgs e)
+        {
+            new FrmSach().Show();
+        }
+
+        private void mnu_NXB_Click(object sender, EventArgs e)
+        {
+            new FrmNhaXuatBan().Show();
+        }
+
+        private void mnu_TacGia_Click(object sender, EventArgs e)
+        {
+            new FrmTacGia().Show();
+        }
+
+        private void mnu_TheLoai_Click(object sender, EventArgs e)
+        {
+            new FrmTheLoai().Show();
+        }
+
+        private void mnu_TaoDonHang_Click(object sender, EventArgs e)
+        {
+            new FrmTaoDonHang().Show();
+        }
+
+        private void mnu_DangKy_Click(object sender, EventArgs e)
+        {
+            new FrmDangKy().Show();
+        }
+
+        private void mnu_DangNhap_Click(object sender, EventArgs e)
+        {
+            new FrmDangNhap().Show();
+            this.Hide();
+        }
+
+        private void mnu_DangXuat_Click(object sender, EventArgs e)
+        {
+            new FrmDangNhap().Show();
+            this.Hide();
+        }
     }
 }

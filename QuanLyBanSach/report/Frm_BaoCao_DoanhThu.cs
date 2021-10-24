@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyBanSach
+namespace QuanLyBanSach.report
 {
     public partial class Frm_BaoCao_DoanhThu : Form
     {
