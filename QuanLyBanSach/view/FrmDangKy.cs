@@ -29,18 +29,19 @@ namespace QuanLyBanSach.view
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             string tennguoidung = txt_TenNguoiDung.Text;
-            string diachi = txt_DiaChi.Text;
-            string sdt = txt_SoDienThoai.Text;
             string email = txt_Email.Text;
+            DateTime now = DateTime.Now;
+            string sdt = txt_SoDienThoai.Text;
+            string diachi = txt_DiaChi.Text;
             string tendangnhap = txt_TenDangNhap.Text;
             string matkhau = txt_MatKhau.Text;
 
             string nguoidung =
                 "insert into NguoiDung values ('{0}', '{1}', '{2}', '{3}', '{4}');";
-            string sql = String.Format(nguoidung, tennguoidung, diachi, email, sdt);
+            string sql = String.Format(nguoidung, tennguoidung, email, now, sdt, diachi );
             string dangnhap =
                 "insert into NguoiDung values ('{0}', '{1}')";
-            string sql1 = String.Format(dangnhap, tendangnhap);
+            string sql1 = String.Format(dangnhap, tendangnhap, matkhau);
 
             try {
                 adoUtilts.Excute(sql);
