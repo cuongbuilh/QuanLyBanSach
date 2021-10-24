@@ -53,6 +53,8 @@ namespace QuanLyBanSach.view
 
         private void btn_TimSach_Click(object sender, EventArgs e)
         {
+            string search_key = txt_TimSach.Text;
+            string prepare = "select MASACH, TENSACH from Sach where MaSach='{}' or TenSach";
 
         }
     }
