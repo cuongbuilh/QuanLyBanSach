@@ -174,6 +174,7 @@ namespace QuanLyBanSach.view
             this.btn_DangKy.TabIndex = 7;
             this.btn_DangKy.Text = "Đăng Ký";
             this.btn_DangKy.UseVisualStyleBackColor = true;
+            this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
             // btn_Thoat
             // 
@@ -207,6 +208,7 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.lbl_DangKy);
             this.Name = "FrmDangKy";
             this.Text = "Đăng Ký Thành Viên";
+            this.Load += new System.EventHandler(this.FrmDangKy_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

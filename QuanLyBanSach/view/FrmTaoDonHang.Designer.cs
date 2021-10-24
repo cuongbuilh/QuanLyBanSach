@@ -37,7 +37,7 @@ namespace QuanLyBanSach.view
             this.data_Sach = new System.Windows.Forms.DataGridView();
             this.data_DonHang = new System.Windows.Forms.DataGridView();
             this.btn_TaoDon = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_TimSach = new System.Windows.Forms.Button();
             this.txt_TimSach = new System.Windows.Forms.TextBox();
             this.txt_MaDon = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -123,14 +123,15 @@ namespace QuanLyBanSach.view
             this.btn_TaoDon.Text = "Tạo Đơn Hàng";
             this.btn_TaoDon.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_TimSach
             // 
-            this.button2.Location = new System.Drawing.Point(124, 241);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "tìm sách";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_TimSach.Location = new System.Drawing.Point(124, 241);
+            this.btn_TimSach.Name = "btn_TimSach";
+            this.btn_TimSach.Size = new System.Drawing.Size(75, 23);
+            this.btn_TimSach.TabIndex = 6;
+            this.btn_TimSach.Text = "tìm sách";
+            this.btn_TimSach.UseVisualStyleBackColor = true;
+            this.btn_TimSach.Click += new System.EventHandler(this.btn_TimSach_Click);
             // 
             // txt_TimSach
             // 
@@ -222,7 +223,7 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.txt_TimSach);
             this.Controls.Add(this.btn_XoaDon);
             this.Controls.Add(this.btn_TimDon);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_TimSach);
             this.Controls.Add(this.btn_TaoDon);
             this.Controls.Add(this.data_DonHang);
             this.Controls.Add(this.data_Sach);
@@ -253,7 +254,7 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.DataGridView data_Sach;
         private System.Windows.Forms.DataGridView data_DonHang;
         private System.Windows.Forms.Button btn_TaoDon;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_TimSach;
         private System.Windows.Forms.TextBox txt_TimSach;
         private System.Windows.Forms.TextBox txt_MaDon;
         private System.Windows.Forms.Label label3;
