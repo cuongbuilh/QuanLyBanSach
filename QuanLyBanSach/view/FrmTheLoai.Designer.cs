@@ -106,6 +106,7 @@ namespace QuanLyBanSach.view
             this.btn_Them.TabIndex = 3;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_Luu
             // 
@@ -116,6 +117,7 @@ namespace QuanLyBanSach.view
             this.btn_Luu.TabIndex = 3;
             this.btn_Luu.Text = "Lưu";
             this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // btn_Sua
             // 
@@ -126,6 +128,7 @@ namespace QuanLyBanSach.view
             this.btn_Sua.TabIndex = 3;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
@@ -136,6 +139,7 @@ namespace QuanLyBanSach.view
             this.btn_Xoa.TabIndex = 3;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Thoat
             // 
@@ -146,6 +150,7 @@ namespace QuanLyBanSach.view
             this.btn_Thoat.TabIndex = 3;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // FrmTheLoai
             // 
@@ -165,6 +170,7 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.lbl_ThongBao);
             this.Name = "FrmTheLoai";
             this.Text = "FrmTheLoai";
+            this.Load += new System.EventHandler(this.FrmTheLoai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.view_TheLoai)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
