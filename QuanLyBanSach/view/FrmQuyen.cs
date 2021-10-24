@@ -29,7 +29,8 @@ namespace QuanLyBanSach.view
         private void FrmQuyen_Load(object sender, EventArgs e)
         {
             LoadDataToForm();
-            BindingData();
+            
+            txt_MaQuyen.Enabled = false;
 
             btn_LuuQuyen.Enabled = false;
         }
@@ -41,16 +42,17 @@ namespace QuanLyBanSach.view
         private void LoadDataToForm()
         {
             view_Quyen.DataSource = adoUtilts.GetDataTable("select * from Quyen");
+            BindingData();
         }
         private void BindingData()
         {
             txt_MaQuyen.Clear();
-            txt_MaQuyen.DataBindings.Add("Text", view_Quyen.DataSource, "TenQuyen");
+            txt_MaQuyen.DataBindings.Clear();
+            txt_MaQuyen.DataBindings.Add("Text", view_Quyen.DataSource, "MaQuyen");
 
             txt_TenQuyen.Clear();
-            txt_TenQuyen.DataBindings.Add("Text", view_Quyen.DataSource, "MaQuyen");
-
-            
+            txt_TenQuyen.DataBindings.Clear();
+            txt_TenQuyen.DataBindings.Add("Text", view_Quyen.DataSource, "TenQuyen");
         }
 
         private void btn_ThemQuyen_Click(object sender, EventArgs e)
@@ -66,8 +68,8 @@ namespace QuanLyBanSach.view
             string tenQuyen = txt_TenQuyen.Text;
 
             string prepare =
-                "insert into Quyen values ('{0}', '{1}');";
-            string sql = String.Format(prepare, maQuyen, tenQuyen);
+                "insert into Quyen(TenQuyen) values('{0}');";
+            string sql = String.Format(prepare, tenQuyen);
 
             try
             {
@@ -83,11 +85,11 @@ namespace QuanLyBanSach.view
 
         private void btn_SuaQuyen_Click(object sender, EventArgs e)
         {
-            string maQuyen = txt_MaQuyen.Text;
+            int maQuyen = Int32.Parse(txt_MaQuyen.Text);
             string tenQuyen = txt_TenQuyen.Text;
 
             string prepapre =
-                "update Quyen set TenSach = '{0}' where MaSach='{1}' ;";
+                "update Quyen set TenQuyen = '{0}' where MaQuyen={1} ;";
 
             string sql = String.Format(prepapre, tenQuyen, maQuyen);
 
@@ -104,15 +106,17 @@ namespace QuanLyBanSach.view
 
         private void btn_XoaQuyen_Click(object sender, EventArgs e)
         {
-            string maQuyen = txt_MaQuyen.Text;
-            string prepare = "delete from Quyen where MaSach = '{0}'";
-            string sql = String.Format(prepare, maQuyen);
+            string tenQuyen = txt_TenQuyen.Text;
+            string prepare = "delete from Quyen where TenQuyen = '{0}'";
+            string sql = String.Format(prepare, tenQuyen);
 
-            DialogResult confirmDialogResult = MessageBox.Show("bạn muốn xóa mã quyền " + maQuyen);
+            DialogResult confirmDialogResult = MessageBox.Show("bạn muốn xóa  quyền " + tenQuyen);
             if (confirmDialogResult == DialogResult.OK)
             {
                 try
                 {
+                    adoUtilts.Disconnect();
+                    adoUtilts.Connect();
                     adoUtilts.Excute(sql);
                 }
                 catch (Exception exception)
@@ -121,6 +125,7 @@ namespace QuanLyBanSach.view
                 }
             }
             LoadDataToForm();
+           
         }
     }
 }

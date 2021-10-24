@@ -28,22 +28,43 @@ namespace QuanLyBanSach.view
 
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
+            // lấy dữ liệu trên form
             string tennguoidung = txt_TenNguoiDung.Text;
-            string diachi = txt_DiaChi.Text;
-            string sdt = txt_SoDienThoai.Text;
             string email = txt_Email.Text;
+            DateTime now = DateTime.Now;
+            string sdt = txt_SoDienThoai.Text;
+            string diachi = txt_DiaChi.Text;
             string tendangnhap = txt_TenDangNhap.Text;
             string matkhau = txt_MatKhau.Text;
 
+            // tạo code sql insert người dùng
             string nguoidung =
+<<<<<<< HEAD
                 "insert into NguoiDung values ('{0}', '{1}', '{2}', '{3}', '{4}');";
-            string sql = String.Format(nguoidung, tennguoidung, diachi, email, sdt);
+            string sql = String.Format(nguoidung, tennguoidung, email, now, sdt, diachi );
             string dangnhap =
                 "insert into NguoiDung values ('{0}', '{1}')";
-            string sql1 = String.Format(dangnhap, tendangnhap);
+            string sql1 = String.Format(dangnhap, tendangnhap, matkhau);
+=======
+                "insert into NguoiDung(TenNguoiDung,Email,SDT,DiaChi) values('{0}', '{1}', '{2}', '{3}');";
+            string sql = String.Format(nguoidung, tennguoidung, email, sdt, diachi);
+            
+            
+>>>>>>> 7e83c2eaf9e8811ff36f3b14ac3a2f2bb6e1cb3f
 
             try {
                 adoUtilts.Excute(sql);
+
+
+                // lấy id người dùng vừa tạo
+                SqlDataReader dataReader = adoUtilts.ExcuteReader("select MaNguoiDung from NguoiDung where Email = '" + email + "'");
+                dataReader.Read();
+                int maNguoiDung = dataReader.GetInt32(0);
+
+                // tạo code sql insert đăng nhập
+                string dangnhap =
+                    "insert into DangNhap(TenDangNhap, MatKhau, MaNguoiDung) values ('{0}','{1}',{2});";
+                string sql1 = String.Format(dangnhap, tendangnhap, matkhau, maNguoiDung);
                 adoUtilts.Excute(sql1);
 
                 MessageBox.Show("Đăng ký thành công");
