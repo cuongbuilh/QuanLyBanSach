@@ -16,6 +16,7 @@ namespace QuanLyBanSach.view
     public partial class FrmDangNhap : Form
     {
         private ADOUtils adoUtilts;
+
         public FrmDangNhap()
         {
             InitializeComponent();
@@ -31,15 +32,27 @@ namespace QuanLyBanSach.view
         {
             string username = txt_DangNhap.Text;
             string password = txt_MatKhau.Text;
-            string selectFomat = "select * from DangNhap where BINARY_CHECKSUM(TENDN) = BINARY_CHECKSUM('{0}') and BINARY_CHECKSUM(MATKHAU) = BINARY_CHECKSUM('{1}');";
+            string selectFomat =
+                "select * from DangNhap where BINARY_CHECKSUM(TenDangNhap) = BINARY_CHECKSUM('{0}') and BINARY_CHECKSUM(MATKHAU) = BINARY_CHECKSUM('{1}') ";
             string sql = String.Format(selectFomat, username, password);
             bool logedIn = adoUtilts.ExcuteReader(sql).Read();
 
+            bool isAdmin = adoUtilts.ExcuteReader(sql + "and MaQuyen = 1").Read();
+
             if (logedIn)
             {
-                MainForm main = new MainForm();
-                main.Show();
-                this.Hide();
+                if (isAdmin)
+                {
+                    MainForm main = new MainForm();
+                    main.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MainFormNguoiDung main = new MainFormNguoiDung();
+                    main.Show();
+                    this.Hide();
+                }
             }
             else
             {

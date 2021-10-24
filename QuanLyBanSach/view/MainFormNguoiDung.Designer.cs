@@ -86,6 +86,7 @@ namespace QuanLyBanSach.view
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.mnu_Thoat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -102,7 +103,8 @@ namespace QuanLyBanSach.view
             this.helpMenu,
             this.mnu_Sach,
             this.mnu_TaoDonHang,
-            this.mnu_DangXuat});
+            this.mnu_DangXuat,
+            this.mnu_Thoat});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
@@ -554,6 +556,13 @@ namespace QuanLyBanSach.view
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
+            // mnu_Thoat
+            // 
+            this.mnu_Thoat.Name = "mnu_Thoat";
+            this.mnu_Thoat.Size = new System.Drawing.Size(49, 20);
+            this.mnu_Thoat.Text = "Thoát";
+            this.mnu_Thoat.Click += new System.EventHandler(this.mnu_Thoat_Click);
+            // 
             // MainFormNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -634,6 +643,7 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.ToolStripMenuItem mnu_Sach;
         private System.Windows.Forms.ToolStripMenuItem mnu_TaoDonHang;
         private System.Windows.Forms.ToolStripMenuItem mnu_DangXuat;
+        private System.Windows.Forms.ToolStripMenuItem mnu_Thoat;
     }
 }
 
