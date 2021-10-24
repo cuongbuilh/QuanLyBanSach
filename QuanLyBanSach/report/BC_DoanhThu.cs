@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyBanSach {
+namespace QuanLyBanSach.report {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace QuanLyBanSach {
         
         public override string FullResourceName {
             get {
-                return "QuanLyBanSach.BC_DoanhThu.rpt";
+                return "QuanLyBanSach.report.BC_DoanhThu.rpt";
             }
             set {
                 // Do nothing
