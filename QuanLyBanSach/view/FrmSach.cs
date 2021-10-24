@@ -15,12 +15,12 @@ namespace QuanLyBanSach.view
 {
     public partial class FrmSach : Form
     {
-        private ADOUtilts adoUtilts;
+        private ADOUtils adoUtilts;
 
         public FrmSach()
         {
             InitializeComponent();
-            adoUtilts = new ADOUtilts();
+            adoUtilts = new ADOUtils();
         }
 
         private void btn_SuaSach_Click(object sender, EventArgs e)

@@ -14,11 +14,11 @@ namespace QuanLyBanSach.view
 {
     public partial class FrmQuyen : Form
     {
-        private ADOUtilts adoUtilts;
+        private ADOUtils adoUtilts;
         public FrmQuyen()
         {
             InitializeComponent();
-            adoUtilts = new ADOUtilts();
+            adoUtilts = new ADOUtils();
         }
 
         private void label1_Click(object sender, EventArgs e)
