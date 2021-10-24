@@ -105,7 +105,7 @@ namespace QuanLyBanSach.view
             string prepare = "delete from THELOAI where TenLoai = '{0}'";
             string sql = String.Format(prepare, tenLoai);
 
-            DialogResult confirmDialogResult = MessageBox.Show("bạn muốn xóa loại " + tenLoai);
+            DialogResult confirmDialogResult = MessageBox.Show("bạn muốn xóa loại " + tenLoai, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (confirmDialogResult == DialogResult.OK)
             {
                 try
