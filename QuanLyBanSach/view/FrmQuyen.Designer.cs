@@ -83,6 +83,7 @@ namespace QuanLyBanSach.view
             this.btn_ThemQuyen.TabIndex = 3;
             this.btn_ThemQuyen.Text = "Thêm";
             this.btn_ThemQuyen.UseVisualStyleBackColor = true;
+            this.btn_ThemQuyen.Click += new System.EventHandler(this.btn_ThemQuyen_Click);
             // 
             // btn_LuuQuyen
             // 
@@ -93,6 +94,7 @@ namespace QuanLyBanSach.view
             this.btn_LuuQuyen.TabIndex = 4;
             this.btn_LuuQuyen.Text = "Lưu";
             this.btn_LuuQuyen.UseVisualStyleBackColor = true;
+            this.btn_LuuQuyen.Click += new System.EventHandler(this.btn_LuuQuyen_Click);
             // 
             // btn_SuaQuyen
             // 
@@ -103,6 +105,7 @@ namespace QuanLyBanSach.view
             this.btn_SuaQuyen.TabIndex = 5;
             this.btn_SuaQuyen.Text = "Sửa";
             this.btn_SuaQuyen.UseVisualStyleBackColor = true;
+            this.btn_SuaQuyen.Click += new System.EventHandler(this.btn_SuaQuyen_Click);
             // 
             // btn_XoaQuyen
             // 
@@ -113,6 +116,7 @@ namespace QuanLyBanSach.view
             this.btn_XoaQuyen.TabIndex = 6;
             this.btn_XoaQuyen.Text = "Xóa";
             this.btn_XoaQuyen.UseVisualStyleBackColor = true;
+            this.btn_XoaQuyen.Click += new System.EventHandler(this.btn_XoaQuyen_Click);
             // 
             // btn_ThoatQuyen
             // 
@@ -123,6 +127,7 @@ namespace QuanLyBanSach.view
             this.btn_ThoatQuyen.TabIndex = 7;
             this.btn_ThoatQuyen.Text = "Thoát";
             this.btn_ThoatQuyen.UseVisualStyleBackColor = true;
+            this.btn_ThoatQuyen.Click += new System.EventHandler(this.btn_ThoatQuyen_Click);
             // 
             // view_Quyen
             // 
@@ -168,6 +173,7 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.lbl_TaoQuyen);
             this.Name = "FrmQuyen";
             this.Text = "FrmQuyen";
+            this.Load += new System.EventHandler(this.FrmQuyen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.view_Quyen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
