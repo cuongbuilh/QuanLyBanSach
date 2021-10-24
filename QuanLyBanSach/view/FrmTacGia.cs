@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyBanSach.Utils;
+
 
 namespace QuanLyBanSach.view
 {
@@ -16,5 +18,13 @@ namespace QuanLyBanSach.view
         {
             InitializeComponent();
         }
+
+        private void FrmTacGia_Load(object sender, EventArgs e)
+        {
+            LoadDataToForm();
+            BindingData();
+        }
+
+
     }
 }
