@@ -71,7 +71,7 @@ namespace QuanLyBanSach.view
             // 
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_Email.Location = new System.Drawing.Point(370, 207);
+            this.lbl_Email.Location = new System.Drawing.Point(60, 161);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(71, 25);
             this.lbl_Email.TabIndex = 1;
@@ -81,7 +81,7 @@ namespace QuanLyBanSach.view
             // 
             this.lbl_SoDienThoai.AutoSize = true;
             this.lbl_SoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_SoDienThoai.Location = new System.Drawing.Point(60, 207);
+            this.lbl_SoDienThoai.Location = new System.Drawing.Point(395, 161);
             this.lbl_SoDienThoai.Name = "lbl_SoDienThoai";
             this.lbl_SoDienThoai.Size = new System.Drawing.Size(60, 25);
             this.lbl_SoDienThoai.TabIndex = 1;
@@ -91,7 +91,7 @@ namespace QuanLyBanSach.view
             // 
             this.lbl_DiaChi.AutoSize = true;
             this.lbl_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_DiaChi.Location = new System.Drawing.Point(60, 159);
+            this.lbl_DiaChi.Location = new System.Drawing.Point(60, 212);
             this.lbl_DiaChi.Name = "lbl_DiaChi";
             this.lbl_DiaChi.Size = new System.Drawing.Size(88, 25);
             this.lbl_DiaChi.TabIndex = 1;
@@ -128,7 +128,7 @@ namespace QuanLyBanSach.view
             // txt_SoDienThoai
             // 
             this.txt_SoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_SoDienThoai.Location = new System.Drawing.Point(126, 204);
+            this.txt_SoDienThoai.Location = new System.Drawing.Point(459, 158);
             this.txt_SoDienThoai.Name = "txt_SoDienThoai";
             this.txt_SoDienThoai.Size = new System.Drawing.Size(220, 31);
             this.txt_SoDienThoai.TabIndex = 2;
@@ -136,7 +136,7 @@ namespace QuanLyBanSach.view
             // txt_DiaChi
             // 
             this.txt_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_DiaChi.Location = new System.Drawing.Point(248, 155);
+            this.txt_DiaChi.Location = new System.Drawing.Point(246, 252);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Size = new System.Drawing.Size(431, 31);
             this.txt_DiaChi.TabIndex = 3;
@@ -144,7 +144,7 @@ namespace QuanLyBanSach.view
             // txt_Email
             // 
             this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_Email.Location = new System.Drawing.Point(448, 205);
+            this.txt_Email.Location = new System.Drawing.Point(137, 158);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(231, 31);
             this.txt_Email.TabIndex = 4;
@@ -152,7 +152,7 @@ namespace QuanLyBanSach.view
             // txt_TenDangNhap
             // 
             this.txt_TenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_TenDangNhap.Location = new System.Drawing.Point(248, 255);
+            this.txt_TenDangNhap.Location = new System.Drawing.Point(249, 206);
             this.txt_TenDangNhap.Name = "txt_TenDangNhap";
             this.txt_TenDangNhap.Size = new System.Drawing.Size(430, 31);
             this.txt_TenDangNhap.TabIndex = 5;
