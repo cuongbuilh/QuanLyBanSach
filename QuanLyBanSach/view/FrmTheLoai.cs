@@ -25,23 +25,26 @@ namespace QuanLyBanSach.view
         private void FrmTheLoai_Load(object sender, EventArgs e)
         {
             LoadDataToForm();
-            BindingData();
 
-            //btn_Luu.Enabled = false;
+            txt_MaLoai.Enabled = false;
+
+            btn_Luu.Enabled = false;
         }
 
         private void LoadDataToForm()
         {
             view_TheLoai.DataSource = adoUtils.GetDataTable("select * from THELOAI");
-            
+            BindingData();
         }
 
         private void BindingData()
         {
             txt_MaLoai.Clear();
+            txt_MaLoai.DataBindings.Clear();
             txt_MaLoai.DataBindings.Add("Text", view_TheLoai.DataSource, "MALOAI");
 
             txt_TenLoai.Clear();
+            txt_TenLoai.DataBindings.Clear();
             txt_TenLoai.DataBindings.Add("Text", view_TheLoai.DataSource, "TENLOAI");
 
         }
@@ -50,6 +53,7 @@ namespace QuanLyBanSach.view
         {
             txt_MaLoai.Text = "";
             txt_TenLoai.Text = "";
+            btn_Luu.Enabled = true;
         }
 
         private void btn_Luu_Click(object sender, EventArgs e)
@@ -59,8 +63,8 @@ namespace QuanLyBanSach.view
             
 
             string prepare =
-                "insert into THELOAI values ('{0}', '{1}');";
-            string sql = String.Format(prepare, maLoai, tenLoai);
+                "insert into THELOAI(TenLoai) values ('{0}');";
+            string sql = String.Format(prepare, tenLoai);
 
             try
             {
@@ -76,11 +80,12 @@ namespace QuanLyBanSach.view
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            string maLoai = txt_MaLoai.Text;
+            int maLoai = Int32.Parse(txt_MaLoai.Text);
             string tenLoai = txt_TenLoai.Text;
-            
 
-            string prepapre = "update THELOAI set TENLOAI='{0}' where MALOAI='{1}';";
+
+            string prepapre =
+                "update THELOAI set TenLoai = '{0}' where MaLoai = {1} ;";
             string sql = String.Format(prepapre, tenLoai, maLoai);
 
             try
@@ -96,15 +101,17 @@ namespace QuanLyBanSach.view
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            string maLoai = txt_MaLoai.Text;
-            string prepare = "delete from THELOAI where MALOAI = '{0}'";
-            string sql = String.Format(prepare, maLoai);
+            string tenLoai = txt_TenLoai.Text;
+            string prepare = "delete from THELOAI where TenLoai = '{0}'";
+            string sql = String.Format(prepare, tenLoai);
 
-            DialogResult confirmDialogResult = MessageBox.Show("bạn muốn xóa mã loại? " + maLoai);
+            DialogResult confirmDialogResult = MessageBox.Show("bạn muốn xóa loại " + tenLoai, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (confirmDialogResult == DialogResult.OK)
             {
                 try
                 {
+                    adoUtils.Disconnect();
+                    adoUtils.Connect();
                     adoUtils.Excute(sql);
                 }
                 catch (Exception exception)
