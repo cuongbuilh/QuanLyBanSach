@@ -34,8 +34,8 @@ namespace QuanLyBanSach.view
             this.label2 = new System.Windows.Forms.Label();
             this.list_Sach = new System.Windows.Forms.ListBox();
             this.list_SoLuong = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.data_Sach = new System.Windows.Forms.DataGridView();
+            this.data_DonHang = new System.Windows.Forms.DataGridView();
             this.btn_TaoDon = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txt_TimSach = new System.Windows.Forms.TextBox();
@@ -47,8 +47,8 @@ namespace QuanLyBanSach.view
             this.txt_MaNguoiDung = new System.Windows.Forms.TextBox();
             this.btn_TimDon = new System.Windows.Forms.Button();
             this.btn_XoaDon = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_Sach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_DonHang)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -97,21 +97,21 @@ namespace QuanLyBanSach.view
             this.list_SoLuong.Size = new System.Drawing.Size(181, 108);
             this.list_SoLuong.TabIndex = 2;
             // 
-            // dataGridView1
+            // data_Sach
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 285);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(178, 150);
-            this.dataGridView1.TabIndex = 3;
+            this.data_Sach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_Sach.Location = new System.Drawing.Point(22, 285);
+            this.data_Sach.Name = "data_Sach";
+            this.data_Sach.Size = new System.Drawing.Size(178, 150);
+            this.data_Sach.TabIndex = 3;
             // 
-            // dataGridView2
+            // data_DonHang
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(231, 285);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(557, 150);
-            this.dataGridView2.TabIndex = 4;
+            this.data_DonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_DonHang.Location = new System.Drawing.Point(231, 285);
+            this.data_DonHang.Name = "data_DonHang";
+            this.data_DonHang.Size = new System.Drawing.Size(557, 150);
+            this.data_DonHang.TabIndex = 4;
             // 
             // btn_TaoDon
             // 
@@ -224,8 +224,8 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.btn_TimDon);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_TaoDon);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.data_DonHang);
+            this.Controls.Add(this.data_Sach);
             this.Controls.Add(this.list_SoLuong);
             this.Controls.Add(this.list_Sach);
             this.Controls.Add(this.label2);
@@ -235,8 +235,9 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.lbl_Title);
             this.Name = "FrmTaoDonHang";
             this.Text = "FrmTaoDonHang";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Load += new System.EventHandler(this.FrmTaoDonHang_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.data_Sach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_DonHang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,8 +250,8 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox list_Sach;
         private System.Windows.Forms.ListBox list_SoLuong;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView data_Sach;
+        private System.Windows.Forms.DataGridView data_DonHang;
         private System.Windows.Forms.Button btn_TaoDon;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txt_TimSach;

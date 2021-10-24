@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyBanSach.view
 {
-    public partial class Application : Form
+    public partial class MainForm : Form
     {
         private int childFormNumber = 0;
 
-        public Application()
+        public MainForm()
         {
             InitializeComponent();
         }
