@@ -32,21 +32,21 @@ namespace QuanLyBanSach.view
             this.lbl_Title = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.list_Sach = new System.Windows.Forms.ListBox();
-            this.list_SoLuong = new System.Windows.Forms.ListBox();
             this.data_Sach = new System.Windows.Forms.DataGridView();
             this.data_DonHang = new System.Windows.Forms.DataGridView();
             this.btn_TaoDon = new System.Windows.Forms.Button();
             this.btn_TimSach = new System.Windows.Forms.Button();
             this.txt_TimSach = new System.Windows.Forms.TextBox();
-            this.txt_MaDon = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_MaNguoiDung = new System.Windows.Forms.TextBox();
             this.btn_TimDon = new System.Windows.Forms.Button();
             this.btn_XoaDon = new System.Windows.Forms.Button();
+            this.txt_DanhSach = new System.Windows.Forms.TextBox();
+            this.txt_SoLuong = new System.Windows.Forms.TextBox();
+            this.cbo_MaDon = new System.Windows.Forms.ComboBox();
+            this.cbo_MaNguoiDung = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.data_Sach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_DonHang)).BeginInit();
             this.SuspendLayout();
@@ -80,22 +80,6 @@ namespace QuanLyBanSach.view
             this.label2.Size = new System.Drawing.Size(92, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Số Lượng";
-            // 
-            // list_Sach
-            // 
-            this.list_Sach.FormattingEnabled = true;
-            this.list_Sach.Location = new System.Drawing.Point(22, 94);
-            this.list_Sach.Name = "list_Sach";
-            this.list_Sach.Size = new System.Drawing.Size(308, 108);
-            this.list_Sach.TabIndex = 2;
-            // 
-            // list_SoLuong
-            // 
-            this.list_SoLuong.FormattingEnabled = true;
-            this.list_SoLuong.Location = new System.Drawing.Point(363, 94);
-            this.list_SoLuong.Name = "list_SoLuong";
-            this.list_SoLuong.Size = new System.Drawing.Size(181, 108);
-            this.list_SoLuong.TabIndex = 2;
             // 
             // data_Sach
             // 
@@ -142,13 +126,6 @@ namespace QuanLyBanSach.view
             this.txt_TimSach.TabIndex = 7;
             this.txt_TimSach.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // txt_MaDon
-            // 
-            this.txt_MaDon.Location = new System.Drawing.Point(318, 243);
-            this.txt_MaDon.Name = "txt_MaDon";
-            this.txt_MaDon.Size = new System.Drawing.Size(121, 20);
-            this.txt_MaDon.TabIndex = 7;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -187,13 +164,6 @@ namespace QuanLyBanSach.view
             this.label6.TabIndex = 8;
             this.label6.Text = "Mã ND";
             // 
-            // txt_MaNguoiDung
-            // 
-            this.txt_MaNguoiDung.Location = new System.Drawing.Point(526, 241);
-            this.txt_MaNguoiDung.Name = "txt_MaNguoiDung";
-            this.txt_MaNguoiDung.Size = new System.Drawing.Size(172, 20);
-            this.txt_MaNguoiDung.TabIndex = 7;
-            // 
             // btn_TimDon
             // 
             this.btn_TimDon.Location = new System.Drawing.Point(713, 219);
@@ -202,6 +172,7 @@ namespace QuanLyBanSach.view
             this.btn_TimDon.TabIndex = 6;
             this.btn_TimDon.Text = "Tìm Đơn";
             this.btn_TimDon.UseVisualStyleBackColor = true;
+            this.btn_TimDon.Click += new System.EventHandler(this.btn_TimDon_Click);
             // 
             // btn_XoaDon
             // 
@@ -211,16 +182,51 @@ namespace QuanLyBanSach.view
             this.btn_XoaDon.TabIndex = 6;
             this.btn_XoaDon.Text = "Xóa đơn";
             this.btn_XoaDon.UseVisualStyleBackColor = true;
+            this.btn_XoaDon.Click += new System.EventHandler(this.btn_XoaDon_Click);
+            // 
+            // txt_DanhSach
+            // 
+            this.txt_DanhSach.Location = new System.Drawing.Point(66, 97);
+            this.txt_DanhSach.Multiline = true;
+            this.txt_DanhSach.Name = "txt_DanhSach";
+            this.txt_DanhSach.Size = new System.Drawing.Size(200, 85);
+            this.txt_DanhSach.TabIndex = 9;
+            // 
+            // txt_SoLuong
+            // 
+            this.txt_SoLuong.Location = new System.Drawing.Point(343, 97);
+            this.txt_SoLuong.Multiline = true;
+            this.txt_SoLuong.Name = "txt_SoLuong";
+            this.txt_SoLuong.Size = new System.Drawing.Size(200, 85);
+            this.txt_SoLuong.TabIndex = 9;
+            // 
+            // cbo_MaDon
+            // 
+            this.cbo_MaDon.FormattingEnabled = true;
+            this.cbo_MaDon.Location = new System.Drawing.Point(306, 241);
+            this.cbo_MaDon.Name = "cbo_MaDon";
+            this.cbo_MaDon.Size = new System.Drawing.Size(136, 21);
+            this.cbo_MaDon.TabIndex = 10;
+            // 
+            // cbo_MaNguoiDung
+            // 
+            this.cbo_MaNguoiDung.FormattingEnabled = true;
+            this.cbo_MaNguoiDung.Location = new System.Drawing.Point(526, 241);
+            this.cbo_MaNguoiDung.Name = "cbo_MaNguoiDung";
+            this.cbo_MaNguoiDung.Size = new System.Drawing.Size(161, 21);
+            this.cbo_MaNguoiDung.TabIndex = 11;
             // 
             // FrmTaoDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbo_MaNguoiDung);
+            this.Controls.Add(this.cbo_MaDon);
+            this.Controls.Add(this.txt_SoLuong);
+            this.Controls.Add(this.txt_DanhSach);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_MaNguoiDung);
-            this.Controls.Add(this.txt_MaDon);
             this.Controls.Add(this.txt_TimSach);
             this.Controls.Add(this.btn_XoaDon);
             this.Controls.Add(this.btn_TimDon);
@@ -228,8 +234,6 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.btn_TaoDon);
             this.Controls.Add(this.data_DonHang);
             this.Controls.Add(this.data_Sach);
-            this.Controls.Add(this.list_SoLuong);
-            this.Controls.Add(this.list_Sach);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -250,20 +254,20 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox list_Sach;
-        private System.Windows.Forms.ListBox list_SoLuong;
         private System.Windows.Forms.DataGridView data_Sach;
         private System.Windows.Forms.DataGridView data_DonHang;
         private System.Windows.Forms.Button btn_TaoDon;
         private System.Windows.Forms.Button btn_TimSach;
         private System.Windows.Forms.TextBox txt_TimSach;
-        private System.Windows.Forms.TextBox txt_MaDon;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_MaNguoiDung;
         private System.Windows.Forms.Button btn_TimDon;
         private System.Windows.Forms.Button btn_XoaDon;
+        private System.Windows.Forms.TextBox txt_DanhSach;
+        private System.Windows.Forms.TextBox txt_SoLuong;
+        private System.Windows.Forms.ComboBox cbo_MaDon;
+        private System.Windows.Forms.ComboBox cbo_MaNguoiDung;
     }
 }
