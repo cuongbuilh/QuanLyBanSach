@@ -26,7 +26,7 @@ namespace QuanLyBanSach.view
             LoadDataToForm();
             BindingData();
 
-            btn_Luu.Enabled = false;
+            //btn_Luu.Enabled = false;
         }
 
         private void LoadDataToForm()
