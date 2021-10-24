@@ -35,44 +35,48 @@ namespace QuanLyBanSach.view
             this.btn_Them = new System.Windows.Forms.Button();
             this.txt_TenNXB = new System.Windows.Forms.TextBox();
             this.lbl_MaNXB = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.view_NhaXuatBan = new System.Windows.Forms.DataGridView();
             this.txt_MaNXB = new System.Windows.Forms.TextBox();
             this.lbl_NhaXuatBan = new System.Windows.Forms.Label();
             this.lbl_TenNXB = new System.Windows.Forms.Label();
             this.lbl_DiaChi = new System.Windows.Forms.Label();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btn_Thoat = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.view_NhaXuatBan)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Sua
             // 
             this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sua.Location = new System.Drawing.Point(807, 338);
+            this.btn_Sua.Location = new System.Drawing.Point(807, 277);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(147, 57);
             this.btn_Sua.TabIndex = 13;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
             this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa.Location = new System.Drawing.Point(807, 449);
+            this.btn_Xoa.Location = new System.Drawing.Point(807, 357);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(147, 57);
             this.btn_Xoa.TabIndex = 14;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Luu
             // 
             this.btn_Luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Luu.Location = new System.Drawing.Point(807, 227);
+            this.btn_Luu.Location = new System.Drawing.Point(807, 195);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(147, 57);
             this.btn_Luu.TabIndex = 15;
             this.btn_Luu.Text = "Lưu";
             this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // btn_Them
             // 
@@ -83,6 +87,7 @@ namespace QuanLyBanSach.view
             this.btn_Them.TabIndex = 16;
             this.btn_Them.Text = "Thêm ";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // txt_TenNXB
             // 
@@ -102,15 +107,15 @@ namespace QuanLyBanSach.view
             this.lbl_MaNXB.TabIndex = 11;
             this.lbl_MaNXB.Text = "Mã NXB";
             // 
-            // dataGridView1
+            // view_NhaXuatBan
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 318);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(704, 186);
-            this.dataGridView1.TabIndex = 10;
+            this.view_NhaXuatBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.view_NhaXuatBan.Location = new System.Drawing.Point(54, 318);
+            this.view_NhaXuatBan.Name = "view_NhaXuatBan";
+            this.view_NhaXuatBan.RowHeadersWidth = 51;
+            this.view_NhaXuatBan.RowTemplate.Height = 24;
+            this.view_NhaXuatBan.Size = new System.Drawing.Size(704, 186);
+            this.view_NhaXuatBan.TabIndex = 10;
             // 
             // txt_MaNXB
             // 
@@ -158,11 +163,23 @@ namespace QuanLyBanSach.view
             this.txt_DiaChi.Size = new System.Drawing.Size(375, 38);
             this.txt_DiaChi.TabIndex = 18;
             // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Thoat.Location = new System.Drawing.Point(807, 436);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(147, 57);
+            this.btn_Thoat.TabIndex = 20;
+            this.btn_Thoat.Text = "Thoát";
+            this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            // 
             // FrmNhaXuatBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 574);
+            this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.lbl_DiaChi);
             this.Controls.Add(this.txt_DiaChi);
             this.Controls.Add(this.lbl_TenNXB);
@@ -172,12 +189,13 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.btn_Them);
             this.Controls.Add(this.txt_TenNXB);
             this.Controls.Add(this.lbl_MaNXB);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.view_NhaXuatBan);
             this.Controls.Add(this.txt_MaNXB);
             this.Controls.Add(this.lbl_NhaXuatBan);
             this.Name = "FrmNhaXuatBan";
             this.Text = "Nhà Xuất Bản";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmNhaXuatBan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.view_NhaXuatBan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,11 +209,12 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.TextBox txt_TenNXB;
         private System.Windows.Forms.Label lbl_MaNXB;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView view_NhaXuatBan;
         private System.Windows.Forms.TextBox txt_MaNXB;
         private System.Windows.Forms.Label lbl_NhaXuatBan;
         private System.Windows.Forms.Label lbl_TenNXB;
         private System.Windows.Forms.Label lbl_DiaChi;
         private System.Windows.Forms.TextBox txt_DiaChi;
+        private System.Windows.Forms.Button btn_Thoat;
     }
 }

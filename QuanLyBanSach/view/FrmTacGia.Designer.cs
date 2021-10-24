@@ -29,7 +29,7 @@ namespace QuanLyBanSach.view
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnThem = new System.Windows.Forms.Button();
+            this.btn_Them = new System.Windows.Forms.Button();
             this.lbl_TacGia = new System.Windows.Forms.Label();
             this.lbl_MaTacGia = new System.Windows.Forms.Label();
             this.lbl_TenTacGia = new System.Windows.Forms.Label();
@@ -38,22 +38,23 @@ namespace QuanLyBanSach.view
             this.txt_MaTacGia = new System.Windows.Forms.TextBox();
             this.txt_TenTacGia = new System.Windows.Forms.TextBox();
             this.txt_MoTa = new System.Windows.Forms.TextBox();
-            this.btnLuu = new System.Windows.Forms.Button();
+            this.btn_Luu = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
+            this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.view_TacGia)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnThem
+            // btn_Them
             // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(636, 49);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(118, 52);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Them.Location = new System.Drawing.Point(636, 49);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(118, 52);
+            this.btn_Them.TabIndex = 0;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // lbl_TacGia
             // 
@@ -127,15 +128,16 @@ namespace QuanLyBanSach.view
             this.txt_MoTa.Size = new System.Drawing.Size(374, 31);
             this.txt_MoTa.TabIndex = 3;
             // 
-            // btnLuu
+            // btn_Luu
             // 
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(636, 127);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(118, 52);
-            this.btnLuu.TabIndex = 0;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Luu.Location = new System.Drawing.Point(636, 127);
+            this.btn_Luu.Name = "btn_Luu";
+            this.btn_Luu.Size = new System.Drawing.Size(118, 52);
+            this.btn_Luu.TabIndex = 0;
+            this.btn_Luu.Text = "Lưu";
+            this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btn_Sua
             // 
@@ -146,16 +148,18 @@ namespace QuanLyBanSach.view
             this.btn_Sua.TabIndex = 0;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
-            // btnXoa
+            // btn_Xoa
             // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(636, 290);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(118, 52);
-            this.btnXoa.TabIndex = 0;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Xoa.Location = new System.Drawing.Point(636, 290);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Size = new System.Drawing.Size(118, 52);
+            this.btn_Xoa.TabIndex = 0;
+            this.btn_Xoa.Text = "Xóa";
+            this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btn_Thoat
             // 
@@ -166,6 +170,7 @@ namespace QuanLyBanSach.view
             this.btn_Thoat.TabIndex = 0;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // FrmTacGia
             // 
@@ -181,12 +186,13 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.lbl_MaTacGia);
             this.Controls.Add(this.lbl_TacGia);
             this.Controls.Add(this.btn_Thoat);
-            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.btn_Sua);
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btn_Luu);
+            this.Controls.Add(this.btn_Them);
             this.Name = "FrmTacGia";
             this.Text = "FrmTacGia";
+            this.Load += new System.EventHandler(this.FrmTacGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.view_TacGia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,7 +201,7 @@ namespace QuanLyBanSach.view
 
         #endregion
 
-        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.Label lbl_TacGia;
         private System.Windows.Forms.Label lbl_MaTacGia;
         private System.Windows.Forms.Label lbl_TenTacGia;
@@ -204,9 +210,9 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.TextBox txt_MaTacGia;
         private System.Windows.Forms.TextBox txt_TenTacGia;
         private System.Windows.Forms.TextBox txt_MoTa;
-        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btn_Luu;
         private System.Windows.Forms.Button btn_Sua;
-        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Thoat;
     }
 }
