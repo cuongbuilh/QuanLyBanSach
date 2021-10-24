@@ -122,6 +122,7 @@ namespace QuanLyBanSach.view
             this.btn_TaoDon.TabIndex = 5;
             this.btn_TaoDon.Text = "Tạo Đơn Hàng";
             this.btn_TaoDon.UseVisualStyleBackColor = true;
+            this.btn_TaoDon.Click += new System.EventHandler(this.btn_TaoDon_Click);
             // 
             // btn_TimSach
             // 
@@ -129,7 +130,7 @@ namespace QuanLyBanSach.view
             this.btn_TimSach.Name = "btn_TimSach";
             this.btn_TimSach.Size = new System.Drawing.Size(75, 23);
             this.btn_TimSach.TabIndex = 6;
-            this.btn_TimSach.Text = "tìm sách";
+            this.btn_TimSach.Text = "Tìm Sách";
             this.btn_TimSach.UseVisualStyleBackColor = true;
             this.btn_TimSach.Click += new System.EventHandler(this.btn_TimSach_Click);
             // 
@@ -199,7 +200,7 @@ namespace QuanLyBanSach.view
             this.btn_TimDon.Name = "btn_TimDon";
             this.btn_TimDon.Size = new System.Drawing.Size(75, 23);
             this.btn_TimDon.TabIndex = 6;
-            this.btn_TimDon.Text = "tìm đơn";
+            this.btn_TimDon.Text = "Tìm Đơn";
             this.btn_TimDon.UseVisualStyleBackColor = true;
             // 
             // btn_XoaDon
@@ -208,7 +209,7 @@ namespace QuanLyBanSach.view
             this.btn_XoaDon.Name = "btn_XoaDon";
             this.btn_XoaDon.Size = new System.Drawing.Size(75, 23);
             this.btn_XoaDon.TabIndex = 6;
-            this.btn_XoaDon.Text = "xóa đơn";
+            this.btn_XoaDon.Text = "Xóa đơn";
             this.btn_XoaDon.UseVisualStyleBackColor = true;
             // 
             // FrmTaoDonHang

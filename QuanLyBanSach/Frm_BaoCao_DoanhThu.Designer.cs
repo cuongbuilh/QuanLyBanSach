@@ -1,5 +1,4 @@
-﻿
-namespace QuanLyBanSach
+﻿namespace QuanLyBanSach
 {
     partial class Frm_BaoCao_DoanhThu
     {

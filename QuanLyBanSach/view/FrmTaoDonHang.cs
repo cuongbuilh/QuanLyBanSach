@@ -57,5 +57,10 @@ namespace QuanLyBanSach.view
             string prepare = "select MASACH, TENSACH from Sach where MaSach='{}' or TenSach";
 
         }
+
+        private void btn_TaoDon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
