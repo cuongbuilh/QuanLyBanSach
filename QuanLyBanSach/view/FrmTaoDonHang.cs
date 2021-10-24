@@ -37,7 +37,7 @@ namespace QuanLyBanSach.view
             data_Sach.DataSource = adoUtils.GetDataTable("select MASACH, TENSACH from Sach");
             data_DonHang.DataSource =
                 adoUtils.GetDataTable(
-                    "select NgayTao, MaNguoiDung , ct.MaDonHang as MaDon, ct.MaSach as MaSach, s.TenSach as TenSach, SoLuong, giabia, giaban from DONHANG dh, Sach s, ChiTietDonHang ct where ct.MaDonHang = dh.MaDonHang ct.MaSach = s.MaSach");
+                    "select NgayTao, MaNguoiDung , ct.MaDonHang as MaDon, ct.MaSach as MaSach, s.TenSach as TenSach, SoLuong, giabia, giaban from DONHANG dh, Sach s, ChiTietDonHang ct where ct.MaDonHang = dh.MaDonHang and ct.MaSach = s.MaSach");
 
 
         }
@@ -55,6 +55,11 @@ namespace QuanLyBanSach.view
         {
             string search_key = txt_TimSach.Text;
             string prepare = "select MASACH, TENSACH from Sach where MaSach='{}' or TenSach";
+
+        }
+
+        private void btn_TaoDon_Click(object sender, EventArgs e)
+        {
 
         }
     }
