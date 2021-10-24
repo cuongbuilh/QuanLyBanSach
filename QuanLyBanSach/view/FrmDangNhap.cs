@@ -31,13 +31,13 @@ namespace QuanLyBanSach.view
         {
             string username = txt_DangNhap.Text;
             string password = txt_MatKhau.Text;
-            string selectFomat = "select * from DANGNHAP where BINARY_CHECKSUM(TENDN) = BINARY_CHECKSUM('{0}') and BINARY_CHECKSUM(MATKHAU) = BINARY_CHECKSUM('{1}');";
+            string selectFomat = "select * from DangNhap where BINARY_CHECKSUM(TENDN) = BINARY_CHECKSUM('{0}') and BINARY_CHECKSUM(MATKHAU) = BINARY_CHECKSUM('{1}');";
             string sql = String.Format(selectFomat, username, password);
             bool logedIn = adoUtilts.ExcuteReader(sql).Read();
 
             if (logedIn)
             {
-                view.Application main = new view.Application();
+                MainForm main = new MainForm();
                 main.Show();
                 this.Hide();
             }
@@ -49,7 +49,7 @@ namespace QuanLyBanSach.view
 
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
-            view.FrmDangKy dangKy = new view.FrmDangKy();
+            FrmDangKy dangKy = new FrmDangKy();
             dangKy.Show();
             this.Hide();
         }
