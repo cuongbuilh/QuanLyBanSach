@@ -25,6 +25,8 @@ namespace QuanLyBanSach.view
         {
             LoadDataToForm();
             BindingData();
+
+            //btn_Luu.Enabled = false;
         }
 
         private void LoadDataToForm()
@@ -48,22 +50,9 @@ namespace QuanLyBanSach.view
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string maTacGia = txt_MaTacGia.Text;
-            string tenTacGia = txt_TenTacGia.Text;
-            string moTa = txt_MoTa.Text;
-
-
-            string prepapre = "insert into TACGIA values ('{0}','{1}','{2}');";
-            string sql = String.Format(prepapre, maTacGia, tenTacGia, moTa);
-            try
-            {
-                adoUtils.Excute(sql);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-            LoadDataToForm();
+            txt_MaTacGia.Text = "";
+            txt_TenTacGia.Text = "";
+            txt_MoTa.Text = "";
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -73,8 +62,7 @@ namespace QuanLyBanSach.view
             string moTa = txt_MoTa.Text;
 
 
-            string prepare =
-                "insert into TACGIA values ('{0}', '{1}', '{2}');";
+            string prepare = "insert into TACGIA values ('{0}', '{1}', '{2}');";
             string sql = String.Format(prepare, maTacGia, tenTacGia, moTa);
 
             try
@@ -107,6 +95,7 @@ namespace QuanLyBanSach.view
             {
                 MessageBox.Show(exception.Message);
             }
+            LoadDataToForm();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -115,7 +104,7 @@ namespace QuanLyBanSach.view
             string prepare = "delete from TACGIA where MATACGIA = '{0}'";
             string sql = String.Format(prepare, maTacGia);
 
-            DialogResult confirmDialogResult = MessageBox.Show("bạn muốn xóa mã tác giả? " + maTacGia);
+            DialogResult confirmDialogResult = MessageBox.Show("bạn muốn xóa mã tác giả?" + maTacGia);
             if (confirmDialogResult == DialogResult.OK)
             {
                 try
@@ -127,6 +116,7 @@ namespace QuanLyBanSach.view
                     MessageBox.Show(exception.Message);
                 }
             }
+            LoadDataToForm();
         }
 
         private void btn_Thoat_Click(object sender, EventArgs e)

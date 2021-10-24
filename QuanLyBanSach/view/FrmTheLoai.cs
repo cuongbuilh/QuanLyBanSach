@@ -26,6 +26,8 @@ namespace QuanLyBanSach.view
         {
             LoadDataToForm();
             BindingData();
+
+            //btn_Luu.Enabled = false;
         }
 
         private void LoadDataToForm()
@@ -46,21 +48,8 @@ namespace QuanLyBanSach.view
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            string maLoai = txt_MaLoai.Text;
-            string tenLoai = txt_TenLoai.Text;
-           
-
-            string prepapre = "insert into THELOAI values ('{0}','{1}');";
-            string sql = String.Format(prepapre, maLoai, tenLoai);
-            try
-            {
-                adoUtils.Excute(sql);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-            LoadDataToForm();
+            txt_MaLoai.Text = "";
+            txt_TenLoai.Text = "";
         }
 
         private void btn_Luu_Click(object sender, EventArgs e)
@@ -102,6 +91,7 @@ namespace QuanLyBanSach.view
             {
                 MessageBox.Show(exception.Message);
             }
+            LoadDataToForm();
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
@@ -122,6 +112,7 @@ namespace QuanLyBanSach.view
                     MessageBox.Show(exception.Message);
                 }
             }
+            LoadDataToForm();
         }
 
         private void btn_Thoat_Click(object sender, EventArgs e)
