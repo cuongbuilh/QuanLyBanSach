@@ -44,6 +44,7 @@ namespace QuanLyBanSach.view
             this.txt_MatKhau = new System.Windows.Forms.TextBox();
             this.btn_DangKy = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
+            this.btn_DangNhap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_DangKy
@@ -168,7 +169,7 @@ namespace QuanLyBanSach.view
             // btn_DangKy
             // 
             this.btn_DangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_DangKy.Location = new System.Drawing.Point(169, 367);
+            this.btn_DangKy.Location = new System.Drawing.Point(299, 367);
             this.btn_DangKy.Name = "btn_DangKy";
             this.btn_DangKy.Size = new System.Drawing.Size(156, 35);
             this.btn_DangKy.TabIndex = 7;
@@ -179,18 +180,31 @@ namespace QuanLyBanSach.view
             // btn_Thoat
             // 
             this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Thoat.Location = new System.Drawing.Point(412, 367);
+            this.btn_Thoat.Location = new System.Drawing.Point(493, 367);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(156, 35);
             this.btn_Thoat.TabIndex = 7;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            // 
+            // btn_DangNhap
+            // 
+            this.btn_DangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_DangNhap.Location = new System.Drawing.Point(111, 367);
+            this.btn_DangNhap.Name = "btn_DangNhap";
+            this.btn_DangNhap.Size = new System.Drawing.Size(147, 34);
+            this.btn_DangNhap.TabIndex = 8;
+            this.btn_DangNhap.Text = "Đăng Nhập";
+            this.btn_DangNhap.UseVisualStyleBackColor = true;
+            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
             // FrmDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_DangNhap);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_DangKy);
             this.Controls.Add(this.txt_MatKhau);
@@ -231,5 +245,6 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.TextBox txt_MatKhau;
         private System.Windows.Forms.Button btn_DangKy;
         private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.Button btn_DangNhap;
     }
 }
