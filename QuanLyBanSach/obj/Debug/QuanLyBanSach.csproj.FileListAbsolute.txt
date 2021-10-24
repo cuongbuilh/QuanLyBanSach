@@ -11,3 +11,8 @@ D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug
 D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.view.MainFormNguoiDung.resources
 D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.csproj.GenerateResource.cache
 D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.csproj.CoreCompileInputs.cache
+D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\bin\Debug\QuanLyBanSach.exe.config
+D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\bin\Debug\QuanLyBanSach.exe
+D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\bin\Debug\QuanLyBanSach.pdb
+D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.exe
+D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.pdb
