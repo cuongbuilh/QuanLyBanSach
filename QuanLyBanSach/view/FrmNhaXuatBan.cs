@@ -60,7 +60,7 @@ namespace QuanLyBanSach.view
             string diaChi = txt_DiaChi.Text;
 
             string prepare =
-                "insert into NguoiDung values ('{0}', '{1}', '{2}');";
+                "insert into NhaXuatBan(TenNXB, DiaChi) values('Kim Dong', 'Ha noi');";
             string sql = String.Format(prepare, maNXB, tenNXB, diaChi);
 
             try

@@ -155,5 +155,10 @@ namespace QuanLyBanSach.view
             new FrmDangNhap().Show();
             this.Hide();
         }
+
+        private void mnu_Thoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -96,6 +96,7 @@ namespace QuanLyBanSach.view
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.mnu_Thoat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -113,7 +114,8 @@ namespace QuanLyBanSach.view
             this.quảnLýTàiKhoảnToolStripMenuItem,
             this.quảnLýSáchToolStripMenuItem,
             this.mnu_TaoDonHang,
-            this.tàiKhoảnToolStripMenuItem});
+            this.tàiKhoảnToolStripMenuItem,
+            this.mnu_Thoat});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
@@ -457,14 +459,14 @@ namespace QuanLyBanSach.view
             // mnu_NguoiDung
             // 
             this.mnu_NguoiDung.Name = "mnu_NguoiDung";
-            this.mnu_NguoiDung.Size = new System.Drawing.Size(180, 22);
+            this.mnu_NguoiDung.Size = new System.Drawing.Size(138, 22);
             this.mnu_NguoiDung.Text = "Người dùng";
             this.mnu_NguoiDung.Click += new System.EventHandler(this.mnu_NguoiDung_Click);
             // 
             // mnu_PhanQuyen
             // 
             this.mnu_PhanQuyen.Name = "mnu_PhanQuyen";
-            this.mnu_PhanQuyen.Size = new System.Drawing.Size(180, 22);
+            this.mnu_PhanQuyen.Size = new System.Drawing.Size(138, 22);
             this.mnu_PhanQuyen.Text = "Phân quyền";
             this.mnu_PhanQuyen.Click += new System.EventHandler(this.mnu_PhanQuyen_Click);
             // 
@@ -482,28 +484,28 @@ namespace QuanLyBanSach.view
             // mnu_Sach
             // 
             this.mnu_Sach.Name = "mnu_Sach";
-            this.mnu_Sach.Size = new System.Drawing.Size(180, 22);
+            this.mnu_Sach.Size = new System.Drawing.Size(145, 22);
             this.mnu_Sach.Text = "Sách";
             this.mnu_Sach.Click += new System.EventHandler(this.mnu_Sach_Click);
             // 
             // mnu_NXB
             // 
             this.mnu_NXB.Name = "mnu_NXB";
-            this.mnu_NXB.Size = new System.Drawing.Size(180, 22);
+            this.mnu_NXB.Size = new System.Drawing.Size(145, 22);
             this.mnu_NXB.Text = "Nhà xuất bản";
             this.mnu_NXB.Click += new System.EventHandler(this.mnu_NXB_Click);
             // 
             // mnu_TacGia
             // 
             this.mnu_TacGia.Name = "mnu_TacGia";
-            this.mnu_TacGia.Size = new System.Drawing.Size(180, 22);
+            this.mnu_TacGia.Size = new System.Drawing.Size(145, 22);
             this.mnu_TacGia.Text = "Tác giả";
             this.mnu_TacGia.Click += new System.EventHandler(this.mnu_TacGia_Click);
             // 
             // mnu_TheLoai
             // 
             this.mnu_TheLoai.Name = "mnu_TheLoai";
-            this.mnu_TheLoai.Size = new System.Drawing.Size(180, 22);
+            this.mnu_TheLoai.Size = new System.Drawing.Size(145, 22);
             this.mnu_TheLoai.Text = "Thể loại";
             this.mnu_TheLoai.Click += new System.EventHandler(this.mnu_TheLoai_Click);
             // 
@@ -527,21 +529,21 @@ namespace QuanLyBanSach.view
             // mnu_DangKy
             // 
             this.mnu_DangKy.Name = "mnu_DangKy";
-            this.mnu_DangKy.Size = new System.Drawing.Size(180, 22);
+            this.mnu_DangKy.Size = new System.Drawing.Size(132, 22);
             this.mnu_DangKy.Text = "Đăng ký";
             this.mnu_DangKy.Click += new System.EventHandler(this.mnu_DangKy_Click);
             // 
             // mnu_DangNhap
             // 
             this.mnu_DangNhap.Name = "mnu_DangNhap";
-            this.mnu_DangNhap.Size = new System.Drawing.Size(180, 22);
+            this.mnu_DangNhap.Size = new System.Drawing.Size(132, 22);
             this.mnu_DangNhap.Text = "Đăng nhập";
             this.mnu_DangNhap.Click += new System.EventHandler(this.mnu_DangNhap_Click);
             // 
             // mnu_DangXuat
             // 
             this.mnu_DangXuat.Name = "mnu_DangXuat";
-            this.mnu_DangXuat.Size = new System.Drawing.Size(180, 22);
+            this.mnu_DangXuat.Size = new System.Drawing.Size(132, 22);
             this.mnu_DangXuat.Text = "Đăng xuất";
             this.mnu_DangXuat.Click += new System.EventHandler(this.mnu_DangXuat_Click);
             // 
@@ -644,6 +646,13 @@ namespace QuanLyBanSach.view
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
+            // mnu_Thoat
+            // 
+            this.mnu_Thoat.Name = "mnu_Thoat";
+            this.mnu_Thoat.Size = new System.Drawing.Size(49, 20);
+            this.mnu_Thoat.Text = "Thoát";
+            this.mnu_Thoat.Click += new System.EventHandler(this.mnu_Thoat_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -734,6 +743,7 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.ToolStripMenuItem mnu_DangKy;
         private System.Windows.Forms.ToolStripMenuItem mnu_DangNhap;
         private System.Windows.Forms.ToolStripMenuItem mnu_DangXuat;
+        private System.Windows.Forms.ToolStripMenuItem mnu_Thoat;
     }
 }
 
