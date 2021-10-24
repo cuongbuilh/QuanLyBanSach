@@ -74,7 +74,7 @@ namespace QuanLyBanSach.view
             string diaChi = txt_DiaChi.Text;
 
             string prepare =
-                "insert into NguoiDung values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');";
+                "insert into NhaXuatBan values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');";
             string sql = String.Format(prepare, maNguoiDung, tenNguoiDung, email, ngayDangKy, soDienThoai, diaChi);
 
             try
