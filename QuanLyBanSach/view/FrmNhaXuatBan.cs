@@ -32,7 +32,7 @@ namespace QuanLyBanSach.view
 
         private void LoadDataToForm()
         {
-            view_NhaXuatBan.DataSource = adoUtils.GetDataTable("select * from Quyen");
+            view_NhaXuatBan.DataSource = adoUtils.GetDataTable("select * from NhaXuatBan");
             BindingData();
         }
 
@@ -40,7 +40,7 @@ namespace QuanLyBanSach.view
         {
             txt_MaNXB.Clear();
             txt_MaNXB.DataBindings.Clear();
-            txt_MaNXB.DataBindings.Add("Value", view_NhaXuatBan.DataSource, "MaNXB");
+            txt_MaNXB.DataBindings.Add("Text", view_NhaXuatBan.DataSource, "MaNXB");
 
             txt_TenNXB.Clear();
             txt_TenNXB.DataBindings.Clear();
@@ -61,12 +61,12 @@ namespace QuanLyBanSach.view
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            string maQuyen = txt_MaNXB.Text;
-            string tenQuyen = txt_TenNXB.Text;
+            string tenNXB = txt_TenNXB.Text;
+            string diaChi = txt_DiaChi.Text;
 
             string prepare =
-                "insert into NhaXuatBan(TenNXB) values('{0}');";
-            string sql = String.Format(prepare, tenQuyen);
+                "insert into NhaXuatBan(TenNXB,DiaChi) values('{0}','{1}');";
+            string sql = String.Format(prepare, tenNXB, diaChi);
 
             try
             {
@@ -84,11 +84,12 @@ namespace QuanLyBanSach.view
         {
             int maNXB = Int32.Parse(txt_MaNXB.Text);
             string tenNXB = txt_TenNXB.Text;
+            string diaChi = txt_DiaChi.Text;
 
             string prepapre =
-                "update NhaXuatBan set TenNXB = '{0}' where MaNXB={1} ;";
+                "update NhaXuatBan set TenNXB = '{0}', DiaChi = '{1}' where MaNXB={2} ;";
 
-            string sql = String.Format(prepapre, tenNXB, maNXB);
+            string sql = String.Format(prepapre, tenNXB, diaChi, maNXB);
 
             try
             {

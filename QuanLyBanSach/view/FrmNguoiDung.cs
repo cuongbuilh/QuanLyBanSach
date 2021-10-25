@@ -26,6 +26,7 @@ namespace QuanLyBanSach.view
             BindingData();
 
             txt_MaNguoiDung.Enabled = false;
+            txt_NgayDangKy.Enabled = false;
 
             btn_Luu.Enabled = false;
         }
@@ -79,14 +80,14 @@ namespace QuanLyBanSach.view
             string maNguoiDung = txt_MaNguoiDung.Text;
             string tenNguoiDung = txt_TenNguoiDung.Text;
             string email = txt_Email.Text;
-            DateTime dateTimeNow = DateTime.Now;
+            // DateTime dateTimeNow = DateTime.Now;
            // string ngayDangKy = txt_NgayDangKy.Text;
             string soDienThoai = txt_SoDienThoai.Text;
             string diaChi = txt_DiaChi.Text;
 
             string prepare =
-                "insert into NguoiDung values ('{0}', '{1}', '{2}', '{3}');";
-            string sql = String.Format(prepare, tenNguoiDung, email, dateTimeNow, soDienThoai, diaChi);
+                "insert into NguoiDung(TenNguoiDung,Email,SDT,DiaChi) values('{0}', '{1}', '{2}', '{3}');";
+            string sql = String.Format(prepare, tenNguoiDung, email, soDienThoai, diaChi);
 
             try
             {
@@ -131,7 +132,7 @@ namespace QuanLyBanSach.view
             string prepare = "delete from NguoiDung where MaNguoiDung = '{0}'";
             string sql = String.Format(prepare, maNguoiDung);
 
-            DialogResult confirmDialogResult = MessageBox.Show("Bạn muốn xóa mã người dùng " + maNguoiDung);
+            DialogResult confirmDialogResult = MessageBox.Show("Bạn muốn xóa mã người dùng " + maNguoiDung, "thông báo", MessageBoxButtons.OKCancel);
             if (confirmDialogResult == DialogResult.OK)
             {
                 try

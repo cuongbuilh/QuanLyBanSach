@@ -29,12 +29,35 @@ namespace QuanLyBanSach.report
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.crv = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.SuspendLayout();
+            // 
+            // crv
+            // 
+            this.crv.ActiveViewIndex = -1;
+            this.crv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crv.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crv.Location = new System.Drawing.Point(0, 0);
+            this.crv.Name = "crv";
+            this.crv.Size = new System.Drawing.Size(800, 450);
+            this.crv.TabIndex = 0;
+            // 
+            // Frm_BaoCao_DoanhThu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.crv);
+            this.Name = "Frm_BaoCao_DoanhThu";
             this.Text = "Frm_BaoCao_DoanhThu";
+            this.Load += new System.EventHandler(this.Frm_BaoCao_DoanhThu_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crv;
     }
 }
