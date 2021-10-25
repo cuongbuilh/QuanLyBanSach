@@ -74,12 +74,16 @@ insert into sach(TenSach, MaNXB, MaTacGia ,GiaBia, GiaBan , NamXuatBan, MaLoai) 
 insert into Quyen(TenQuyen) values('admin');
 insert into NguoiDung(TenNguoiDung,Email,SDT,DiaChi) values('admin', 'admin', '0000000000', 'admin');
 insert into DangNhap(TenDangNhap, MatKhau, MaNguoiDung, MaQuyen) values ('admin','admin',1,1);
-insert into DonHang( MaNguoiDung,NgayTao) values (1);
+insert into DonHang( MaNguoiDung) values (1);
 insert into ChiTietDonHang(MaDonHang,MaSach,SoLuong) values (1,1,10);
 
 
-select * from NguoiDung;
+select * from DonHang;
+
+select getdate();
 
 select * from DangNhap where BINARY_CHECKSUM(TenDangNhap) = BINARY_CHECKSUM('admin') and BINARY_CHECKSUM(MATKHAU) = BINARY_CHECKSUM('{1}');
 
 select * from DangNhap where BINARY_CHECKSUM(TenDangNhap) = BINARY_CHECKSUM('admin') and BINARY_CHECKSUM(MATKHAU) = BINARY_CHECKSUM('admin') and MaQuyen = 1;
+
+select NgayTao, MaNguoiDung , ct.MaDonHang as MaDon, ct.MaSach as MaSach, s.TenSach as TenSach, SoLuong, giabia, giaban from DONHANG dh, Sach s, ChiTietDonHang ct where ct.MaDonHang = dh.MaDonHang and ct.MaSach = s.MaSach and ct.MaDonHang = 2

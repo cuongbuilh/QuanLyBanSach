@@ -50,7 +50,9 @@ namespace QuanLyBanSach.report
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crv);
             this.Name = "Frm_BaoCao_DoanhThu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_BaoCao_DoanhThu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_BaoCao_DoanhThu_Load);
             this.ResumeLayout(false);
 
