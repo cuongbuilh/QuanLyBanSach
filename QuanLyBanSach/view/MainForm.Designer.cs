@@ -84,6 +84,7 @@ namespace QuanLyBanSach.view
             this.mnu_DangKy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_DangNhap = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_DangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Thoat = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -96,7 +97,6 @@ namespace QuanLyBanSach.view
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.mnu_Thoat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -547,6 +547,13 @@ namespace QuanLyBanSach.view
             this.mnu_DangXuat.Text = "Đăng xuất";
             this.mnu_DangXuat.Click += new System.EventHandler(this.mnu_DangXuat_Click);
             // 
+            // mnu_Thoat
+            // 
+            this.mnu_Thoat.Name = "mnu_Thoat";
+            this.mnu_Thoat.Size = new System.Drawing.Size(49, 20);
+            this.mnu_Thoat.Text = "Thoát";
+            this.mnu_Thoat.Click += new System.EventHandler(this.mnu_Thoat_Click);
+            // 
             // toolStrip
             // 
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -646,13 +653,6 @@ namespace QuanLyBanSach.view
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // mnu_Thoat
-            // 
-            this.mnu_Thoat.Name = "mnu_Thoat";
-            this.mnu_Thoat.Size = new System.Drawing.Size(49, 20);
-            this.mnu_Thoat.Text = "Thoát";
-            this.mnu_Thoat.Click += new System.EventHandler(this.mnu_Thoat_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -664,6 +664,7 @@ namespace QuanLyBanSach.view
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

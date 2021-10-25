@@ -174,5 +174,10 @@ namespace QuanLyBanSach.view
             string sql = "select * from Sach" + where;
             view_Sach.DataSource = adoUtilts.GetDataTable(sql);
         }
+
+        private void lbl_MaTacGia_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

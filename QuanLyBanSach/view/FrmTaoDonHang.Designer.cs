@@ -240,6 +240,7 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_Title);
             this.Name = "FrmTaoDonHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTaoDonHang";
             this.Load += new System.EventHandler(this.FrmTaoDonHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_Sach)).EndInit();

@@ -169,6 +169,7 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.lbl_MaLoai);
             this.Controls.Add(this.lbl_ThongBao);
             this.Name = "FrmTheLoai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTheLoai";
             this.Load += new System.EventHandler(this.FrmTheLoai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.view_TheLoai)).EndInit();

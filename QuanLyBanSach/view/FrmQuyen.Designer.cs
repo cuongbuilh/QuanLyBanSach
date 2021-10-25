@@ -47,9 +47,10 @@ namespace QuanLyBanSach.view
             // 
             this.lbl_TaoQuyen.AutoSize = true;
             this.lbl_TaoQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_TaoQuyen.Location = new System.Drawing.Point(476, 9);
+            this.lbl_TaoQuyen.Location = new System.Drawing.Point(237, 9);
+            this.lbl_TaoQuyen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_TaoQuyen.Name = "lbl_TaoQuyen";
-            this.lbl_TaoQuyen.Size = new System.Drawing.Size(132, 44);
+            this.lbl_TaoQuyen.Size = new System.Drawing.Size(102, 36);
             this.lbl_TaoQuyen.TabIndex = 0;
             this.lbl_TaoQuyen.Text = "Quyền";
             this.lbl_TaoQuyen.Click += new System.EventHandler(this.label1_Click);
@@ -58,9 +59,10 @@ namespace QuanLyBanSach.view
             // 
             this.lbl_MaQuyen.AutoSize = true;
             this.lbl_MaQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_MaQuyen.Location = new System.Drawing.Point(24, 86);
+            this.lbl_MaQuyen.Location = new System.Drawing.Point(18, 70);
+            this.lbl_MaQuyen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_MaQuyen.Name = "lbl_MaQuyen";
-            this.lbl_MaQuyen.Size = new System.Drawing.Size(153, 32);
+            this.lbl_MaQuyen.Size = new System.Drawing.Size(118, 26);
             this.lbl_MaQuyen.TabIndex = 1;
             this.lbl_MaQuyen.Text = "Mã Quyền:";
             // 
@@ -68,18 +70,20 @@ namespace QuanLyBanSach.view
             // 
             this.lbl_TenQuyen.AutoSize = true;
             this.lbl_TenQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_TenQuyen.Location = new System.Drawing.Point(24, 143);
+            this.lbl_TenQuyen.Location = new System.Drawing.Point(18, 116);
+            this.lbl_TenQuyen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_TenQuyen.Name = "lbl_TenQuyen";
-            this.lbl_TenQuyen.Size = new System.Drawing.Size(163, 32);
+            this.lbl_TenQuyen.Size = new System.Drawing.Size(124, 26);
             this.lbl_TenQuyen.TabIndex = 2;
             this.lbl_TenQuyen.Text = "Tên Quyền:";
             // 
             // btn_ThemQuyen
             // 
             this.btn_ThemQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_ThemQuyen.Location = new System.Drawing.Point(841, 111);
+            this.btn_ThemQuyen.Location = new System.Drawing.Point(442, 55);
+            this.btn_ThemQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ThemQuyen.Name = "btn_ThemQuyen";
-            this.btn_ThemQuyen.Size = new System.Drawing.Size(141, 64);
+            this.btn_ThemQuyen.Size = new System.Drawing.Size(106, 52);
             this.btn_ThemQuyen.TabIndex = 3;
             this.btn_ThemQuyen.Text = "Thêm";
             this.btn_ThemQuyen.UseVisualStyleBackColor = true;
@@ -88,9 +92,10 @@ namespace QuanLyBanSach.view
             // btn_LuuQuyen
             // 
             this.btn_LuuQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_LuuQuyen.Location = new System.Drawing.Point(841, 197);
+            this.btn_LuuQuyen.Location = new System.Drawing.Point(442, 115);
+            this.btn_LuuQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_LuuQuyen.Name = "btn_LuuQuyen";
-            this.btn_LuuQuyen.Size = new System.Drawing.Size(141, 64);
+            this.btn_LuuQuyen.Size = new System.Drawing.Size(106, 52);
             this.btn_LuuQuyen.TabIndex = 4;
             this.btn_LuuQuyen.Text = "Lưu";
             this.btn_LuuQuyen.UseVisualStyleBackColor = true;
@@ -99,9 +104,10 @@ namespace QuanLyBanSach.view
             // btn_SuaQuyen
             // 
             this.btn_SuaQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_SuaQuyen.Location = new System.Drawing.Point(841, 288);
+            this.btn_SuaQuyen.Location = new System.Drawing.Point(442, 175);
+            this.btn_SuaQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_SuaQuyen.Name = "btn_SuaQuyen";
-            this.btn_SuaQuyen.Size = new System.Drawing.Size(141, 64);
+            this.btn_SuaQuyen.Size = new System.Drawing.Size(106, 52);
             this.btn_SuaQuyen.TabIndex = 5;
             this.btn_SuaQuyen.Text = "Sửa";
             this.btn_SuaQuyen.UseVisualStyleBackColor = true;
@@ -110,9 +116,10 @@ namespace QuanLyBanSach.view
             // btn_XoaQuyen
             // 
             this.btn_XoaQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_XoaQuyen.Location = new System.Drawing.Point(841, 377);
+            this.btn_XoaQuyen.Location = new System.Drawing.Point(442, 240);
+            this.btn_XoaQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_XoaQuyen.Name = "btn_XoaQuyen";
-            this.btn_XoaQuyen.Size = new System.Drawing.Size(141, 64);
+            this.btn_XoaQuyen.Size = new System.Drawing.Size(106, 52);
             this.btn_XoaQuyen.TabIndex = 6;
             this.btn_XoaQuyen.Text = "Xóa";
             this.btn_XoaQuyen.UseVisualStyleBackColor = true;
@@ -121,9 +128,10 @@ namespace QuanLyBanSach.view
             // btn_ThoatQuyen
             // 
             this.btn_ThoatQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_ThoatQuyen.Location = new System.Drawing.Point(841, 468);
+            this.btn_ThoatQuyen.Location = new System.Drawing.Point(442, 306);
+            this.btn_ThoatQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ThoatQuyen.Name = "btn_ThoatQuyen";
-            this.btn_ThoatQuyen.Size = new System.Drawing.Size(141, 64);
+            this.btn_ThoatQuyen.Size = new System.Drawing.Size(106, 52);
             this.btn_ThoatQuyen.TabIndex = 7;
             this.btn_ThoatQuyen.Text = "Thoát";
             this.btn_ThoatQuyen.UseVisualStyleBackColor = true;
@@ -132,34 +140,37 @@ namespace QuanLyBanSach.view
             // view_Quyen
             // 
             this.view_Quyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.view_Quyen.Location = new System.Drawing.Point(12, 294);
+            this.view_Quyen.Location = new System.Drawing.Point(23, 165);
+            this.view_Quyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.view_Quyen.Name = "view_Quyen";
             this.view_Quyen.RowHeadersWidth = 51;
             this.view_Quyen.RowTemplate.Height = 24;
-            this.view_Quyen.Size = new System.Drawing.Size(726, 238);
+            this.view_Quyen.Size = new System.Drawing.Size(378, 193);
             this.view_Quyen.TabIndex = 8;
             // 
             // txt_MaQuyen
             // 
             this.txt_MaQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_MaQuyen.Location = new System.Drawing.Point(203, 80);
+            this.txt_MaQuyen.Location = new System.Drawing.Point(152, 65);
+            this.txt_MaQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_MaQuyen.Name = "txt_MaQuyen";
-            this.txt_MaQuyen.Size = new System.Drawing.Size(315, 38);
+            this.txt_MaQuyen.Size = new System.Drawing.Size(237, 32);
             this.txt_MaQuyen.TabIndex = 9;
             // 
             // txt_TenQuyen
             // 
             this.txt_TenQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_TenQuyen.Location = new System.Drawing.Point(203, 143);
+            this.txt_TenQuyen.Location = new System.Drawing.Point(152, 116);
+            this.txt_TenQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_TenQuyen.Name = "txt_TenQuyen";
-            this.txt_TenQuyen.Size = new System.Drawing.Size(315, 38);
+            this.txt_TenQuyen.Size = new System.Drawing.Size(237, 32);
             this.txt_TenQuyen.TabIndex = 10;
             // 
             // FrmQuyen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 627);
+            this.ClientSize = new System.Drawing.Size(583, 375);
             this.Controls.Add(this.txt_TenQuyen);
             this.Controls.Add(this.txt_MaQuyen);
             this.Controls.Add(this.view_Quyen);
@@ -171,7 +182,9 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.lbl_TenQuyen);
             this.Controls.Add(this.lbl_MaQuyen);
             this.Controls.Add(this.lbl_TaoQuyen);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmQuyen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQuyen";
             this.Load += new System.EventHandler(this.FrmQuyen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.view_Quyen)).EndInit();

@@ -35,8 +35,11 @@ namespace QuanLyBanSach.view
             string selectFomat =
                 "select * from DangNhap where BINARY_CHECKSUM(TenDangNhap) = BINARY_CHECKSUM('{0}') and BINARY_CHECKSUM(MATKHAU) = BINARY_CHECKSUM('{1}') ";
             string sql = String.Format(selectFomat, username, password);
+            
+            // kiểm tra đăng nhập
             bool logedIn = adoUtilts.ExcuteReader(sql).Read();
 
+            // kiểm tra admin
             bool isAdmin = adoUtilts.ExcuteReader(sql + "and MaQuyen = 1").Read();
 
             if (logedIn)
