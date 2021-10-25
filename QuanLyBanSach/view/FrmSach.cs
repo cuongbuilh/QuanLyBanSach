@@ -25,7 +25,7 @@ namespace QuanLyBanSach.view
 
         private void btn_SuaSach_Click(object sender, EventArgs e)
         {
-            string maSach = txt_MaSach.Text;
+            int maSach = Int32.Parse(txt_MaSach.Text);
             string tenSach = txt_TenSach.Text;
             string maNXB = txt_MaNXB.Text;
             string maTacGia = txt_MaTacGia.Text;
@@ -36,7 +36,7 @@ namespace QuanLyBanSach.view
 
 
             string prepapre =
-                "update Sach set TenSach = '{0}',  MaNXB= '{1}', MaTacGia ='{2}', GiaBia='{3}', GiaBan='{4}', NamXuatBan = '{5}', MaLoai = '{6}' where MaSach='{7}' ;";
+                "update Sach set TenSach = '{0}',  MaNXB= {1}, MaTacGia ={2}, GiaBia={3}, GiaBan={4}, NamXuatBan = {5}, MaLoai = {6} where MaSach={7} ;";
 
             string sql = String.Format(prepapre, tenSach, maNXB, maTacGia, giaBia, giaBan, namXuatBan, maLoai, maSach);
 
@@ -56,6 +56,8 @@ namespace QuanLyBanSach.view
             LoadDataToForm();
             BindingData();
             btn_LuuSach.Enabled = false;
+            txt_MaSach.Enabled = false;
+            rdo_TenSach.Checked = true;
         }
 
         private void btn_ThoatSach_Click(object sender, EventArgs e)
@@ -65,35 +67,33 @@ namespace QuanLyBanSach.view
         private void LoadDataToForm()
         {
             view_Sach.DataSource = adoUtilts.GetDataTable("select * from Sach");
-
+            BindingData();
         }
         private void BindingData()
         {
-            txt_MaSach.Clear();
+            txt_MaSach.DataBindings.Clear();
             txt_MaSach.DataBindings.Add("Text", view_Sach.DataSource, "MaSach");
 
-            txt_TenSach.Clear();
+            txt_TenSach.DataBindings.Clear();
             txt_TenSach.DataBindings.Add("Text", view_Sach.DataSource, "TenSach");
 
-            txt_MaNXB.Clear();
+            txt_MaNXB.DataBindings.Clear();
             txt_MaNXB.DataBindings.Add("Text", view_Sach.DataSource, "MaNXB");
 
-            txt_MaTacGia.Clear();
+            txt_MaTacGia.DataBindings.Clear();
             txt_MaTacGia.DataBindings.Add("Text", view_Sach.DataSource, "MaTacGia");
 
-            txt_GiaBia.Clear();
+            txt_GiaBia.DataBindings.Clear();
             txt_GiaBia.DataBindings.Add("Text", view_Sach.DataSource, "GiaBia");
 
-            txt_GiaBan.Clear();
+            txt_GiaBan.DataBindings.Clear();
             txt_GiaBan.DataBindings.Add("Text", view_Sach.DataSource, "GiaBan");
 
-            txt_NSX.Clear();
+            txt_NSX.DataBindings.Clear();
             txt_NSX.DataBindings.Add("Text", view_Sach.DataSource, "NamXuatBan");
 
-            txt_MaLoai.Clear();
+            txt_MaLoai.DataBindings.Clear();
             txt_MaLoai.DataBindings.Add("Text", view_Sach.DataSource, "MaLoai");
-
-           
         }
 
         private void btn_ThemSach_Click(object sender, EventArgs e)
@@ -112,7 +112,7 @@ namespace QuanLyBanSach.view
         private void btn_XoaSach_Click(object sender, EventArgs e)
         {
             string maSach = txt_MaSach.Text;
-            string prepare = "delete from Sach where MaSach = '{0}'";
+            string prepare = "delete from Sach where MaSach = {0}";
             string sql = String.Format(prepare, maSach);
 
             DialogResult confirmDialogResult = MessageBox.Show("bạn muốn xóa sách " + maSach);
@@ -132,7 +132,6 @@ namespace QuanLyBanSach.view
 
         private void btn_LuuSach_Click(object sender, EventArgs e)
         {
-            string maSach = txt_MaSach.Text;
             string tenSach = txt_TenSach.Text;
             string maNXB = txt_MaNXB.Text;
             string maTacGia = txt_MaTacGia.Text;
@@ -143,8 +142,8 @@ namespace QuanLyBanSach.view
 
 
             string prepare =
-                "insert into Sach values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}');";
-            string sql = String.Format(prepare, maSach, tenSach, maNXB, maTacGia, giaBia, giaBan, namXuatBan, maLoai);
+                "insert into sach(TenSach, MaNXB, MaTacGia ,GiaBia, GiaBan , NamXuatBan, MaLoai) values ('{0}', {1}, {2}, {3},{4}, {5}, {6});";
+            string sql = String.Format(prepare, tenSach, maNXB, maTacGia, giaBia, giaBan, namXuatBan, maLoai);
 
             try
             {
@@ -161,15 +160,23 @@ namespace QuanLyBanSach.view
         private void btn_TimKiemSach_Click(object sender, EventArgs e)
         {
             string timkiem = txt_TimKiem.Text;
+
+            if (timkiem == "")
+            {
+                LoadDataToForm();
+                return;
+            }
+
+
             string where = "";
             if (rdo_MaSach.Checked)
             {
-                where = where + "where MaSach = '" + timkiem + "';";
+                where = where + " where MaSach = " + timkiem + ";";
 
             }
             else
             {
-                where = where + "where TenSach = '" + timkiem + "';";
+                where = where + " where TenSach = '" + timkiem + "';";
             }
             string sql = "select * from Sach" + where;
             view_Sach.DataSource = adoUtilts.GetDataTable(sql);

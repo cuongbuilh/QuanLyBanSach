@@ -122,3 +122,7 @@ D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug
 D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.view.FrmNhaXuatBan.resources
 D:\code\dotnet\BTL\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.view.FrmNguoiDung.resources
 D:\code\dotnet\BTL\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.view.FrmNhaXuatBan.resources
+D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\bin\Debug\FlashControlV71.dll
+D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\bin\Debug\ShockwaveFlashObjects.dll
+D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.report.Frm_BaoCao_DoanhThu.resources

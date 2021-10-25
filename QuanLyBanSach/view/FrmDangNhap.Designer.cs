@@ -103,7 +103,7 @@ namespace QuanLyBanSach.view
             this.btn_Thoat.Location = new System.Drawing.Point(406, 9);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 39);
-            this.btn_Thoat.TabIndex = 3;
+            this.btn_Thoat.TabIndex = 5;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -114,7 +114,7 @@ namespace QuanLyBanSach.view
             this.btn_DangKy.Location = new System.Drawing.Point(70, 162);
             this.btn_DangKy.Name = "btn_DangKy";
             this.btn_DangKy.Size = new System.Drawing.Size(127, 40);
-            this.btn_DangKy.TabIndex = 3;
+            this.btn_DangKy.TabIndex = 4;
             this.btn_DangKy.Text = "Đăng ký";
             this.btn_DangKy.UseVisualStyleBackColor = true;
             this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);

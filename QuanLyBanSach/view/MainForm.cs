@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyBanSach.report;
 
 namespace QuanLyBanSach.view
 {
@@ -161,6 +162,12 @@ namespace QuanLyBanSach.view
         private void mnu_Thoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void mnu_BaoCao_DoanhThu_Click(object sender, EventArgs e)
+        {
+            Frm_BaoCao_DoanhThu frmBaoCaoDoanhThu = new Frm_BaoCao_DoanhThu();
+            frmBaoCaoDoanhThu.Show();
         }
     }
 }

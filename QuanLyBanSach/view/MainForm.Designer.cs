@@ -97,6 +97,8 @@ namespace QuanLyBanSach.view
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.mnu_BaoCao = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_BaoCao_DoanhThu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -115,11 +117,12 @@ namespace QuanLyBanSach.view
             this.quảnLýSáchToolStripMenuItem,
             this.mnu_TaoDonHang,
             this.tàiKhoảnToolStripMenuItem,
+            this.mnu_BaoCao,
             this.mnu_Thoat});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(778, 24);
+            this.menuStrip.Size = new System.Drawing.Size(824, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -567,7 +570,7 @@ namespace QuanLyBanSach.view
             this.helpToolStripButton});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(778, 25);
+            this.toolStrip.Size = new System.Drawing.Size(824, 25);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
             // 
@@ -641,9 +644,9 @@ namespace QuanLyBanSach.view
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 431);
+            this.statusStrip.Location = new System.Drawing.Point(0, 435);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(778, 22);
+            this.statusStrip.Size = new System.Drawing.Size(824, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -653,11 +656,26 @@ namespace QuanLyBanSach.view
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
+            // mnu_BaoCao
+            // 
+            this.mnu_BaoCao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnu_BaoCao_DoanhThu});
+            this.mnu_BaoCao.Name = "mnu_BaoCao";
+            this.mnu_BaoCao.Size = new System.Drawing.Size(63, 20);
+            this.mnu_BaoCao.Text = "Báo Cáo";
+            // 
+            // mnu_BaoCao_DoanhThu
+            // 
+            this.mnu_BaoCao_DoanhThu.Name = "mnu_BaoCao_DoanhThu";
+            this.mnu_BaoCao_DoanhThu.Size = new System.Drawing.Size(180, 22);
+            this.mnu_BaoCao_DoanhThu.Text = "Doanh Thu";
+            this.mnu_BaoCao_DoanhThu.Click += new System.EventHandler(this.mnu_BaoCao_DoanhThu_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 453);
+            this.ClientSize = new System.Drawing.Size(824, 457);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip);
@@ -745,6 +763,8 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.ToolStripMenuItem mnu_DangNhap;
         private System.Windows.Forms.ToolStripMenuItem mnu_DangXuat;
         private System.Windows.Forms.ToolStripMenuItem mnu_Thoat;
+        private System.Windows.Forms.ToolStripMenuItem mnu_BaoCao;
+        private System.Windows.Forms.ToolStripMenuItem mnu_BaoCao_DoanhThu;
     }
 }
 

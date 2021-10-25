@@ -16,5 +16,12 @@ namespace QuanLyBanSach.report
         {
             InitializeComponent();
         }
+
+        private void Frm_BaoCao_DoanhThu_Load(object sender, EventArgs e)
+        {
+            BC_DoanhThu bc = new BC_DoanhThu();
+            bc.SetDatabaseLogon("sa","Admin1234");
+            crv.ReportSource = bc;
+        }
     }
 }
