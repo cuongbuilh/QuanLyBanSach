@@ -44,6 +44,14 @@ namespace QuanLyBanSach.view
 
             if (logedIn)
             {
+                // lấy id đăng nhập
+                SqlDataReader dataReader = adoUtilts.ExcuteReader("select MaNguoiDung from DangNhap where TenDangNhap = '" + username + "'");
+                dataReader.Read();
+                int maNguoiDung = dataReader.GetInt32(0);
+                LOGIN_USER.TENNGUOIDUNG = username;
+                LOGIN_USER.MANGUOIDUNG = maNguoiDung;
+
+
                 if (isAdmin)
                 {
                     MainForm main = new MainForm();
