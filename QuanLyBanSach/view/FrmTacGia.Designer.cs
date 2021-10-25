@@ -191,6 +191,7 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.btn_Luu);
             this.Controls.Add(this.btn_Them);
             this.Name = "FrmTacGia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTacGia";
             this.Load += new System.EventHandler(this.FrmTacGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.view_TacGia)).EndInit();

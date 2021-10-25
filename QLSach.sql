@@ -1,4 +1,5 @@
-﻿drop database QLSach;
+﻿use master;
+drop database QLSach;
 create database QLSach;
 use QLSach;
 
@@ -17,7 +18,7 @@ create table TacGia(
 
 create table TheLoai(
     MaLoai integer primary key identity(1,1),
-    TenLoai nvarchar(60) not null
+    TenLoai nvarchar(60) not null unique
 );
 
 create table Sach(
@@ -34,20 +35,20 @@ create table Sach(
 create table NguoiDung(
     MaNguoiDung integer primary key identity(1,1),
     TenNguoiDung nvarchar(120) not null,
-    Email varchar(50) not null unique,
+    Email nvarchar(50) not null unique,
     NgayDangKy date default(getdate()),
-    SDT char(13) not null,
+    SDT varchar(13) not null unique,
     DiaChi nvarchar(120)
 );
 
 create table Quyen(
     MaQuyen integer primary key identity(1,1),
-    TenQuyen char(32) not null
+    TenQuyen varchar(32) not null unique
 );
 
 create table DangNhap(
     TenDangNhap char(32) primary key,
-    MatKhau char(32) not null,
+    MatKhau varchar(32) not null,
     MaNguoiDung integer references NguoiDung(MaNguoiDung),
     MaQuyen integer references Quyen(MaQuyen)
 );
@@ -77,3 +78,8 @@ insert into DonHang( MaNguoiDung) values (1);
 insert into ChiTietDonHang(MaDonHang,MaSach,SoLuong) values (1,1,10);
 
 
+select * from NguoiDung;
+
+select * from DangNhap where BINARY_CHECKSUM(TenDangNhap) = BINARY_CHECKSUM('admin') and BINARY_CHECKSUM(MATKHAU) = BINARY_CHECKSUM('{1}');
+
+select * from DangNhap where BINARY_CHECKSUM(TenDangNhap) = BINARY_CHECKSUM('admin') and BINARY_CHECKSUM(MATKHAU) = BINARY_CHECKSUM('admin') and MaQuyen = 1;

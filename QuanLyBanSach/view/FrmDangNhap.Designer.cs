@@ -43,7 +43,7 @@ namespace QuanLyBanSach.view
             // 
             this.lbl_DangNhap.AutoSize = true;
             this.lbl_DangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_DangNhap.Location = new System.Drawing.Point(221, 74);
+            this.lbl_DangNhap.Location = new System.Drawing.Point(157, 7);
             this.lbl_DangNhap.Name = "lbl_DangNhap";
             this.lbl_DangNhap.Size = new System.Drawing.Size(161, 33);
             this.lbl_DangNhap.TabIndex = 0;
@@ -53,7 +53,7 @@ namespace QuanLyBanSach.view
             // 
             this.lbl_TenDangNhap.AutoSize = true;
             this.lbl_TenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_TenDangNhap.Location = new System.Drawing.Point(102, 159);
+            this.lbl_TenDangNhap.Location = new System.Drawing.Point(12, 75);
             this.lbl_TenDangNhap.Name = "lbl_TenDangNhap";
             this.lbl_TenDangNhap.Size = new System.Drawing.Size(163, 25);
             this.lbl_TenDangNhap.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace QuanLyBanSach.view
             // 
             this.lbl_MatKhau.AutoSize = true;
             this.lbl_MatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_MatKhau.Location = new System.Drawing.Point(102, 201);
+            this.lbl_MatKhau.Location = new System.Drawing.Point(65, 112);
             this.lbl_MatKhau.Name = "lbl_MatKhau";
             this.lbl_MatKhau.Size = new System.Drawing.Size(110, 25);
             this.lbl_MatKhau.TabIndex = 1;
@@ -72,24 +72,24 @@ namespace QuanLyBanSach.view
             // txt_DangNhap
             // 
             this.txt_DangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_DangNhap.Location = new System.Drawing.Point(260, 156);
+            this.txt_DangNhap.Location = new System.Drawing.Point(190, 75);
             this.txt_DangNhap.Name = "txt_DangNhap";
-            this.txt_DangNhap.Size = new System.Drawing.Size(266, 31);
-            this.txt_DangNhap.TabIndex = 2;
+            this.txt_DangNhap.Size = new System.Drawing.Size(190, 31);
+            this.txt_DangNhap.TabIndex = 1;
             // 
             // txt_MatKhau
             // 
             this.txt_MatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_MatKhau.Location = new System.Drawing.Point(260, 198);
+            this.txt_MatKhau.Location = new System.Drawing.Point(190, 112);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.PasswordChar = '*';
-            this.txt_MatKhau.Size = new System.Drawing.Size(266, 31);
+            this.txt_MatKhau.Size = new System.Drawing.Size(190, 31);
             this.txt_MatKhau.TabIndex = 2;
             // 
             // btn_DangNhap
             // 
             this.btn_DangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_DangNhap.Location = new System.Drawing.Point(107, 262);
+            this.btn_DangNhap.Location = new System.Drawing.Point(270, 162);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(127, 40);
             this.btn_DangNhap.TabIndex = 3;
@@ -99,10 +99,10 @@ namespace QuanLyBanSach.view
             // 
             // btn_Thoat
             // 
-            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Thoat.Location = new System.Drawing.Point(399, 262);
+            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_Thoat.Location = new System.Drawing.Point(406, 9);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(127, 40);
+            this.btn_Thoat.Size = new System.Drawing.Size(75, 39);
             this.btn_Thoat.TabIndex = 3;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@ namespace QuanLyBanSach.view
             // btn_DangKy
             // 
             this.btn_DangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_DangKy.Location = new System.Drawing.Point(255, 262);
+            this.btn_DangKy.Location = new System.Drawing.Point(70, 162);
             this.btn_DangKy.Name = "btn_DangKy";
             this.btn_DangKy.Size = new System.Drawing.Size(127, 40);
             this.btn_DangKy.TabIndex = 3;
@@ -123,7 +123,7 @@ namespace QuanLyBanSach.view
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 372);
+            this.ClientSize = new System.Drawing.Size(491, 229);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_DangKy);
             this.Controls.Add(this.btn_DangNhap);
@@ -133,6 +133,7 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.lbl_TenDangNhap);
             this.Controls.Add(this.lbl_DangNhap);
             this.Name = "FrmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.FrmDangNhap_Load);
             this.ResumeLayout(false);

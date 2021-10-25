@@ -51,7 +51,7 @@ namespace QuanLyBanSach.view
             // 
             this.lbl_DangKy.AutoSize = true;
             this.lbl_DangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_DangKy.Location = new System.Drawing.Point(229, 44);
+            this.lbl_DangKy.Location = new System.Drawing.Point(242, 44);
             this.lbl_DangKy.Name = "lbl_DangKy";
             this.lbl_DangKy.Size = new System.Drawing.Size(264, 33);
             this.lbl_DangKy.TabIndex = 0;
@@ -169,7 +169,7 @@ namespace QuanLyBanSach.view
             // btn_DangKy
             // 
             this.btn_DangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_DangKy.Location = new System.Drawing.Point(299, 367);
+            this.btn_DangKy.Location = new System.Drawing.Point(423, 366);
             this.btn_DangKy.Name = "btn_DangKy";
             this.btn_DangKy.Size = new System.Drawing.Size(156, 35);
             this.btn_DangKy.TabIndex = 7;
@@ -180,9 +180,9 @@ namespace QuanLyBanSach.view
             // btn_Thoat
             // 
             this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Thoat.Location = new System.Drawing.Point(493, 367);
+            this.btn_Thoat.Location = new System.Drawing.Point(663, 2);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(156, 35);
+            this.btn_Thoat.Size = new System.Drawing.Size(79, 34);
             this.btn_Thoat.TabIndex = 7;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@ namespace QuanLyBanSach.view
             // btn_DangNhap
             // 
             this.btn_DangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_DangNhap.Location = new System.Drawing.Point(111, 367);
+            this.btn_DangNhap.Location = new System.Drawing.Point(221, 367);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(147, 34);
             this.btn_DangNhap.TabIndex = 8;
@@ -203,7 +203,7 @@ namespace QuanLyBanSach.view
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(745, 450);
             this.Controls.Add(this.btn_DangNhap);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_DangKy);
