@@ -45,8 +45,9 @@ namespace QuanLyBanSach.view
             this.btn_XoaDon = new System.Windows.Forms.Button();
             this.txt_DanhSach = new System.Windows.Forms.TextBox();
             this.txt_SoLuong = new System.Windows.Forms.TextBox();
-            this.cbo_MaDon = new System.Windows.Forms.ComboBox();
-            this.cbo_MaNguoiDung = new System.Windows.Forms.ComboBox();
+            this.txt_MaNguooiDung = new System.Windows.Forms.TextBox();
+            this.txt_MaDon = new System.Windows.Forms.TextBox();
+            this.btn_thoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_Sach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_DonHang)).BeginInit();
             this.SuspendLayout();
@@ -200,29 +201,38 @@ namespace QuanLyBanSach.view
             this.txt_SoLuong.Size = new System.Drawing.Size(200, 85);
             this.txt_SoLuong.TabIndex = 9;
             // 
-            // cbo_MaDon
+            // txt_MaNguooiDung
             // 
-            this.cbo_MaDon.FormattingEnabled = true;
-            this.cbo_MaDon.Location = new System.Drawing.Point(306, 241);
-            this.cbo_MaDon.Name = "cbo_MaDon";
-            this.cbo_MaDon.Size = new System.Drawing.Size(136, 21);
-            this.cbo_MaDon.TabIndex = 10;
+            this.txt_MaNguooiDung.Location = new System.Drawing.Point(526, 241);
+            this.txt_MaNguooiDung.Name = "txt_MaNguooiDung";
+            this.txt_MaNguooiDung.Size = new System.Drawing.Size(154, 20);
+            this.txt_MaNguooiDung.TabIndex = 10;
             // 
-            // cbo_MaNguoiDung
+            // txt_MaDon
             // 
-            this.cbo_MaNguoiDung.FormattingEnabled = true;
-            this.cbo_MaNguoiDung.Location = new System.Drawing.Point(526, 241);
-            this.cbo_MaNguoiDung.Name = "cbo_MaNguoiDung";
-            this.cbo_MaNguoiDung.Size = new System.Drawing.Size(161, 21);
-            this.cbo_MaNguoiDung.TabIndex = 11;
+            this.txt_MaDon.Location = new System.Drawing.Point(305, 241);
+            this.txt_MaDon.Name = "txt_MaDon";
+            this.txt_MaDon.Size = new System.Drawing.Size(160, 20);
+            this.txt_MaDon.TabIndex = 10;
+            // 
+            // btn_thoat
+            // 
+            this.btn_thoat.Location = new System.Drawing.Point(728, 0);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.Size = new System.Drawing.Size(75, 23);
+            this.btn_thoat.TabIndex = 11;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.UseVisualStyleBackColor = true;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // FrmTaoDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbo_MaNguoiDung);
-            this.Controls.Add(this.cbo_MaDon);
+            this.Controls.Add(this.btn_thoat);
+            this.Controls.Add(this.txt_MaDon);
+            this.Controls.Add(this.txt_MaNguooiDung);
             this.Controls.Add(this.txt_SoLuong);
             this.Controls.Add(this.txt_DanhSach);
             this.Controls.Add(this.label6);
@@ -268,7 +278,8 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.Button btn_XoaDon;
         private System.Windows.Forms.TextBox txt_DanhSach;
         private System.Windows.Forms.TextBox txt_SoLuong;
-        private System.Windows.Forms.ComboBox cbo_MaDon;
-        private System.Windows.Forms.ComboBox cbo_MaNguoiDung;
+        private System.Windows.Forms.TextBox txt_MaNguooiDung;
+        private System.Windows.Forms.TextBox txt_MaDon;
+        private System.Windows.Forms.Button btn_thoat;
     }
 }
