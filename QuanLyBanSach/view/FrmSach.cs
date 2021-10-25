@@ -27,13 +27,12 @@ namespace QuanLyBanSach.view
         {
             int maSach = Int32.Parse(txt_MaSach.Text);
             string tenSach = txt_TenSach.Text;
-            string maNXB = txt_MaNXB.Text;
-            string maTacGia = txt_MaTacGia.Text;
+            string maNXB = (string)cbo_MaNXB.SelectedValue;
+            string maTacGia = (string)cbo_MaTG.SelectedValue;
             string giaBia = txt_GiaBia.Text;
             string giaBan = txt_GiaBan.Text;
             string namXuatBan = txt_NSX.Text;
-            string maLoai = txt_MaLoai.Text;
-
+            string maLoai = (string)cbo_MaLoai.SelectedValue;
 
             string prepapre =
                 "update Sach set TenSach = '{0}',  MaNXB= {1}, MaTacGia ={2}, GiaBia={3}, GiaBan={4}, NamXuatBan = {5}, MaLoai = {6} where MaSach={7} ;";
@@ -66,6 +65,15 @@ namespace QuanLyBanSach.view
         }
         private void LoadDataToForm()
         {
+            cbo_MaLoai.DataSource = adoUtilts.GetDataTable("select * from TheLoai");
+            cbo_MaLoai.DisplayMember = "TenLoai";
+            cbo_MaLoai.ValueMember = "MaLoai";
+            cbo_MaNXB.DataSource = adoUtilts.GetDataTable("select * from NhaXuatBan");
+            cbo_MaNXB.DisplayMember = "TenNXB";
+            cbo_MaNXB.ValueMember = "MaNXB";
+            cbo_MaTG.DataSource = adoUtilts.GetDataTable("select * from TacGia");
+            cbo_MaTG.DisplayMember = "TenTacGia";
+            cbo_MaTG.ValueMember = "MaTacGia";
             view_Sach.DataSource = adoUtilts.GetDataTable("select * from Sach");
             BindingData();
         }
@@ -77,11 +85,11 @@ namespace QuanLyBanSach.view
             txt_TenSach.DataBindings.Clear();
             txt_TenSach.DataBindings.Add("Text", view_Sach.DataSource, "TenSach");
 
-            txt_MaNXB.DataBindings.Clear();
-            txt_MaNXB.DataBindings.Add("Text", view_Sach.DataSource, "MaNXB");
+            //cbo_MaNXB.DataBindings.Clear();
+            //cbo_MaNXB.Add()
 
-            txt_MaTacGia.DataBindings.Clear();
-            txt_MaTacGia.DataBindings.Add("Text", view_Sach.DataSource, "MaTacGia");
+            //cbo_MaTG.DataBindings.Clear();
+            //cbo_MaTG.DataBindings.Add( view_Sach.DataSource);
 
             txt_GiaBia.DataBindings.Clear();
             txt_GiaBia.DataBindings.Add("Text", view_Sach.DataSource, "GiaBia");
@@ -92,26 +100,26 @@ namespace QuanLyBanSach.view
             txt_NSX.DataBindings.Clear();
             txt_NSX.DataBindings.Add("Text", view_Sach.DataSource, "NamXuatBan");
 
-            txt_MaLoai.DataBindings.Clear();
-            txt_MaLoai.DataBindings.Add("Text", view_Sach.DataSource, "MaLoai");
+            //cbo_MaLoai.DataBindings.Clear();
+            //cbo_MaLoai.DataBindings.Add("Text", view_Sach.DataSource, "MaLoai");
         }
 
         private void btn_ThemSach_Click(object sender, EventArgs e)
         {
             txt_MaSach.Text = "";
             txt_TenSach.Text = "";
-            txt_MaNXB.Text = "";
-            txt_MaTacGia.Text = "";
+            cbo_MaNXB.Text = "";
+            cbo_MaTG.Text = "";
             txt_GiaBia.Text = "";
             txt_GiaBan.Text = "";
             txt_NSX.Text = "";
-            txt_MaLoai.Text = "";
+            cbo_MaLoai.Text = "";
             btn_LuuSach.Enabled = true;
         }
 
         private void btn_XoaSach_Click(object sender, EventArgs e)
         {
-            string maSach = txt_MaSach.Text;
+            int maSach = int.Parse(txt_MaSach.Text);
             string prepare = "delete from Sach where MaSach = {0}";
             string sql = String.Format(prepare, maSach);
 
@@ -133,12 +141,12 @@ namespace QuanLyBanSach.view
         private void btn_LuuSach_Click(object sender, EventArgs e)
         {
             string tenSach = txt_TenSach.Text;
-            string maNXB = txt_MaNXB.Text;
-            string maTacGia = txt_MaTacGia.Text;
+            int maNXB = (int)cbo_MaNXB.SelectedValue;
+            int maTacGia = (int)cbo_MaTG.SelectedValue;
             string giaBia = txt_GiaBia.Text;
             string giaBan = txt_GiaBan.Text;
             string namXuatBan = txt_NSX.Text;
-            string maLoai = txt_MaLoai.Text;
+            int maLoai = (int)cbo_MaLoai.SelectedValue;
 
 
             string prepare =

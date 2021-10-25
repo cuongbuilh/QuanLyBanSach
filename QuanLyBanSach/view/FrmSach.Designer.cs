@@ -31,7 +31,6 @@ namespace QuanLyBanSach.view
         {
             this.lbl_Sach = new System.Windows.Forms.Label();
             this.gr_Sach = new System.Windows.Forms.GroupBox();
-            this.txt_MaLoai = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_NSX = new System.Windows.Forms.Label();
             this.lbl_GiaBan = new System.Windows.Forms.Label();
@@ -41,8 +40,6 @@ namespace QuanLyBanSach.view
             this.txt_NSX = new System.Windows.Forms.TextBox();
             this.txt_GiaBan = new System.Windows.Forms.TextBox();
             this.txt_GiaBia = new System.Windows.Forms.TextBox();
-            this.txt_MaTacGia = new System.Windows.Forms.TextBox();
-            this.txt_MaNXB = new System.Windows.Forms.TextBox();
             this.txt_TenSach = new System.Windows.Forms.TextBox();
             this.txt_MaSach = new System.Windows.Forms.TextBox();
             this.lbl_TenSach = new System.Windows.Forms.Label();
@@ -58,6 +55,9 @@ namespace QuanLyBanSach.view
             this.rdo_TenSach = new System.Windows.Forms.RadioButton();
             this.txt_TimKiem = new System.Windows.Forms.TextBox();
             this.grb_TimKiem = new System.Windows.Forms.GroupBox();
+            this.cbo_MaNXB = new System.Windows.Forms.ComboBox();
+            this.cbo_MaTG = new System.Windows.Forms.ComboBox();
+            this.cbo_MaLoai = new System.Windows.Forms.ComboBox();
             this.gr_Sach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.view_Sach)).BeginInit();
             this.grb_TimKiem.SuspendLayout();
@@ -76,7 +76,9 @@ namespace QuanLyBanSach.view
             // 
             // gr_Sach
             // 
-            this.gr_Sach.Controls.Add(this.txt_MaLoai);
+            this.gr_Sach.Controls.Add(this.cbo_MaLoai);
+            this.gr_Sach.Controls.Add(this.cbo_MaTG);
+            this.gr_Sach.Controls.Add(this.cbo_MaNXB);
             this.gr_Sach.Controls.Add(this.label1);
             this.gr_Sach.Controls.Add(this.lbl_NSX);
             this.gr_Sach.Controls.Add(this.lbl_GiaBan);
@@ -86,34 +88,24 @@ namespace QuanLyBanSach.view
             this.gr_Sach.Controls.Add(this.txt_NSX);
             this.gr_Sach.Controls.Add(this.txt_GiaBan);
             this.gr_Sach.Controls.Add(this.txt_GiaBia);
-            this.gr_Sach.Controls.Add(this.txt_MaTacGia);
-            this.gr_Sach.Controls.Add(this.txt_MaNXB);
             this.gr_Sach.Controls.Add(this.txt_TenSach);
             this.gr_Sach.Controls.Add(this.txt_MaSach);
             this.gr_Sach.Controls.Add(this.lbl_TenSach);
             this.gr_Sach.Controls.Add(this.lbl_MaSach);
             this.gr_Sach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.gr_Sach.Location = new System.Drawing.Point(21, 42);
-            this.gr_Sach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gr_Sach.Margin = new System.Windows.Forms.Padding(2);
             this.gr_Sach.Name = "gr_Sach";
-            this.gr_Sach.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gr_Sach.Padding = new System.Windows.Forms.Padding(2);
             this.gr_Sach.Size = new System.Drawing.Size(817, 243);
             this.gr_Sach.TabIndex = 1;
             this.gr_Sach.TabStop = false;
             this.gr_Sach.Text = "Thông tin Sách";
             // 
-            // txt_MaLoai
-            // 
-            this.txt_MaLoai.Location = new System.Drawing.Point(125, 191);
-            this.txt_MaLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_MaLoai.Name = "txt_MaLoai";
-            this.txt_MaLoai.Size = new System.Drawing.Size(258, 32);
-            this.txt_MaLoai.TabIndex = 15;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 200);
+            this.label1.Location = new System.Drawing.Point(29, 192);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 26);
@@ -174,7 +166,7 @@ namespace QuanLyBanSach.view
             // txt_NSX
             // 
             this.txt_NSX.Location = new System.Drawing.Point(536, 194);
-            this.txt_NSX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NSX.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NSX.Name = "txt_NSX";
             this.txt_NSX.Size = new System.Drawing.Size(258, 32);
             this.txt_NSX.TabIndex = 8;
@@ -182,7 +174,7 @@ namespace QuanLyBanSach.view
             // txt_GiaBan
             // 
             this.txt_GiaBan.Location = new System.Drawing.Point(534, 142);
-            this.txt_GiaBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_GiaBan.Margin = new System.Windows.Forms.Padding(2);
             this.txt_GiaBan.Name = "txt_GiaBan";
             this.txt_GiaBan.Size = new System.Drawing.Size(259, 32);
             this.txt_GiaBan.TabIndex = 7;
@@ -190,31 +182,15 @@ namespace QuanLyBanSach.view
             // txt_GiaBia
             // 
             this.txt_GiaBia.Location = new System.Drawing.Point(534, 90);
-            this.txt_GiaBia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_GiaBia.Margin = new System.Windows.Forms.Padding(2);
             this.txt_GiaBia.Name = "txt_GiaBia";
             this.txt_GiaBia.Size = new System.Drawing.Size(259, 32);
             this.txt_GiaBia.TabIndex = 6;
             // 
-            // txt_MaTacGia
-            // 
-            this.txt_MaTacGia.Location = new System.Drawing.Point(126, 136);
-            this.txt_MaTacGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_MaTacGia.Name = "txt_MaTacGia";
-            this.txt_MaTacGia.Size = new System.Drawing.Size(260, 32);
-            this.txt_MaTacGia.TabIndex = 5;
-            // 
-            // txt_MaNXB
-            // 
-            this.txt_MaNXB.Location = new System.Drawing.Point(126, 90);
-            this.txt_MaNXB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_MaNXB.Name = "txt_MaNXB";
-            this.txt_MaNXB.Size = new System.Drawing.Size(260, 32);
-            this.txt_MaNXB.TabIndex = 4;
-            // 
             // txt_TenSach
             // 
             this.txt_TenSach.Location = new System.Drawing.Point(534, 40);
-            this.txt_TenSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_TenSach.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TenSach.Name = "txt_TenSach";
             this.txt_TenSach.Size = new System.Drawing.Size(260, 32);
             this.txt_TenSach.TabIndex = 3;
@@ -222,7 +198,7 @@ namespace QuanLyBanSach.view
             // txt_MaSach
             // 
             this.txt_MaSach.Location = new System.Drawing.Point(126, 43);
-            this.txt_MaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MaSach.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MaSach.Name = "txt_MaSach";
             this.txt_MaSach.Size = new System.Drawing.Size(260, 32);
             this.txt_MaSach.TabIndex = 2;
@@ -251,7 +227,7 @@ namespace QuanLyBanSach.view
             // 
             this.btn_ThemSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_ThemSach.Location = new System.Drawing.Point(861, 51);
-            this.btn_ThemSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ThemSach.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ThemSach.Name = "btn_ThemSach";
             this.btn_ThemSach.Size = new System.Drawing.Size(130, 44);
             this.btn_ThemSach.TabIndex = 2;
@@ -263,7 +239,7 @@ namespace QuanLyBanSach.view
             // 
             this.btn_SuaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_SuaSach.Location = new System.Drawing.Point(861, 169);
-            this.btn_SuaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_SuaSach.Margin = new System.Windows.Forms.Padding(2);
             this.btn_SuaSach.Name = "btn_SuaSach";
             this.btn_SuaSach.Size = new System.Drawing.Size(130, 44);
             this.btn_SuaSach.TabIndex = 3;
@@ -275,7 +251,7 @@ namespace QuanLyBanSach.view
             // 
             this.btn_LuuSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_LuuSach.Location = new System.Drawing.Point(861, 108);
-            this.btn_LuuSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_LuuSach.Margin = new System.Windows.Forms.Padding(2);
             this.btn_LuuSach.Name = "btn_LuuSach";
             this.btn_LuuSach.Size = new System.Drawing.Size(130, 44);
             this.btn_LuuSach.TabIndex = 4;
@@ -287,7 +263,7 @@ namespace QuanLyBanSach.view
             // 
             this.btn_XoaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_XoaSach.Location = new System.Drawing.Point(861, 234);
-            this.btn_XoaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_XoaSach.Margin = new System.Windows.Forms.Padding(2);
             this.btn_XoaSach.Name = "btn_XoaSach";
             this.btn_XoaSach.Size = new System.Drawing.Size(130, 44);
             this.btn_XoaSach.TabIndex = 5;
@@ -299,7 +275,7 @@ namespace QuanLyBanSach.view
             // 
             this.btn_ThoatSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_ThoatSach.Location = new System.Drawing.Point(861, 290);
-            this.btn_ThoatSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ThoatSach.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ThoatSach.Name = "btn_ThoatSach";
             this.btn_ThoatSach.Size = new System.Drawing.Size(130, 44);
             this.btn_ThoatSach.TabIndex = 6;
@@ -311,7 +287,7 @@ namespace QuanLyBanSach.view
             // 
             this.btn_TimKiemSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_TimKiemSach.Location = new System.Drawing.Point(25, 290);
-            this.btn_TimKiemSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_TimKiemSach.Margin = new System.Windows.Forms.Padding(2);
             this.btn_TimKiemSach.Name = "btn_TimKiemSach";
             this.btn_TimKiemSach.Size = new System.Drawing.Size(131, 44);
             this.btn_TimKiemSach.TabIndex = 7;
@@ -323,7 +299,7 @@ namespace QuanLyBanSach.view
             // 
             this.view_Sach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.view_Sach.Location = new System.Drawing.Point(21, 340);
-            this.view_Sach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_Sach.Margin = new System.Windows.Forms.Padding(2);
             this.view_Sach.Name = "view_Sach";
             this.view_Sach.RowHeadersWidth = 51;
             this.view_Sach.RowTemplate.Height = 24;
@@ -335,7 +311,7 @@ namespace QuanLyBanSach.view
             this.rdo_MaSach.AutoSize = true;
             this.rdo_MaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rdo_MaSach.Location = new System.Drawing.Point(23, 11);
-            this.rdo_MaSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdo_MaSach.Margin = new System.Windows.Forms.Padding(2);
             this.rdo_MaSach.Name = "rdo_MaSach";
             this.rdo_MaSach.Size = new System.Drawing.Size(116, 30);
             this.rdo_MaSach.TabIndex = 9;
@@ -348,7 +324,7 @@ namespace QuanLyBanSach.view
             this.rdo_TenSach.AutoSize = true;
             this.rdo_TenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rdo_TenSach.Location = new System.Drawing.Point(159, 11);
-            this.rdo_TenSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdo_TenSach.Margin = new System.Windows.Forms.Padding(2);
             this.rdo_TenSach.Name = "rdo_TenSach";
             this.rdo_TenSach.Size = new System.Drawing.Size(122, 30);
             this.rdo_TenSach.TabIndex = 10;
@@ -360,7 +336,7 @@ namespace QuanLyBanSach.view
             // 
             this.txt_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_TimKiem.Location = new System.Drawing.Point(171, 296);
-            this.txt_TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_TimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TimKiem.Name = "txt_TimKiem";
             this.txt_TimKiem.Size = new System.Drawing.Size(258, 32);
             this.txt_TimKiem.TabIndex = 11;
@@ -370,13 +346,40 @@ namespace QuanLyBanSach.view
             this.grb_TimKiem.Controls.Add(this.rdo_MaSach);
             this.grb_TimKiem.Controls.Add(this.rdo_TenSach);
             this.grb_TimKiem.Location = new System.Drawing.Point(450, 290);
-            this.grb_TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grb_TimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.grb_TimKiem.Name = "grb_TimKiem";
-            this.grb_TimKiem.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grb_TimKiem.Padding = new System.Windows.Forms.Padding(2);
             this.grb_TimKiem.Size = new System.Drawing.Size(295, 46);
             this.grb_TimKiem.TabIndex = 12;
             this.grb_TimKiem.TabStop = false;
             this.grb_TimKiem.Text = "Tìm Kiếm";
+            // 
+            // cbo_MaNXB
+            // 
+            this.cbo_MaNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbo_MaNXB.FormattingEnabled = true;
+            this.cbo_MaNXB.Location = new System.Drawing.Point(126, 94);
+            this.cbo_MaNXB.Name = "cbo_MaNXB";
+            this.cbo_MaNXB.Size = new System.Drawing.Size(259, 33);
+            this.cbo_MaNXB.TabIndex = 15;
+            // 
+            // cbo_MaTG
+            // 
+            this.cbo_MaTG.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbo_MaTG.FormattingEnabled = true;
+            this.cbo_MaTG.Location = new System.Drawing.Point(126, 136);
+            this.cbo_MaTG.Name = "cbo_MaTG";
+            this.cbo_MaTG.Size = new System.Drawing.Size(259, 33);
+            this.cbo_MaTG.TabIndex = 15;
+            // 
+            // cbo_MaLoai
+            // 
+            this.cbo_MaLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbo_MaLoai.FormattingEnabled = true;
+            this.cbo_MaLoai.Location = new System.Drawing.Point(127, 187);
+            this.cbo_MaLoai.Name = "cbo_MaLoai";
+            this.cbo_MaLoai.Size = new System.Drawing.Size(259, 33);
+            this.cbo_MaLoai.TabIndex = 15;
             // 
             // FrmSach
             // 
@@ -394,7 +397,7 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.btn_ThemSach);
             this.Controls.Add(this.gr_Sach);
             this.Controls.Add(this.lbl_Sach);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSach";
@@ -427,8 +430,6 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.TextBox txt_NSX;
         private System.Windows.Forms.TextBox txt_GiaBan;
         private System.Windows.Forms.TextBox txt_GiaBia;
-        private System.Windows.Forms.TextBox txt_MaTacGia;
-        private System.Windows.Forms.TextBox txt_MaNXB;
         private System.Windows.Forms.TextBox txt_TenSach;
         private System.Windows.Forms.TextBox txt_MaSach;
         private System.Windows.Forms.TextBox txt_TimKiem;
@@ -437,8 +438,10 @@ namespace QuanLyBanSach.view
         private System.Windows.Forms.Label lbl_GiaBia;
         private System.Windows.Forms.Label lbl_MaTacGia;
         private System.Windows.Forms.Label lbl_MaNXB;
-        private System.Windows.Forms.TextBox txt_MaLoai;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grb_TimKiem;
+        private System.Windows.Forms.ComboBox cbo_MaTG;
+        private System.Windows.Forms.ComboBox cbo_MaNXB;
+        private System.Windows.Forms.ComboBox cbo_MaLoai;
     }
 }

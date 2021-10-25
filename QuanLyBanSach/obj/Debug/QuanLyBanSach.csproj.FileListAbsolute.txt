@@ -126,3 +126,7 @@ D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\bin\Debug
 D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\bin\Debug\FlashControlV71.dll
 D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\bin\Debug\ShockwaveFlashObjects.dll
 D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.report.Frm_BaoCao_DoanhThu.resources
+D:\code\dotnet\BTL\QuanLyBanSach\QuanLyBanSach\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\code\dotnet\BTL\QuanLyBanSach\QuanLyBanSach\bin\Debug\FlashControlV71.dll
+D:\code\dotnet\BTL\QuanLyBanSach\QuanLyBanSach\bin\Debug\ShockwaveFlashObjects.dll
+D:\code\dotnet\BTL\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.report.Frm_BaoCao_DoanhThu.resources
