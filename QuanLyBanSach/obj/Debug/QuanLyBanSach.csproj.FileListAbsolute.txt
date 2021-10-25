@@ -120,3 +120,5 @@ D:\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.exe
 D:\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.pdb
 D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.view.FrmNguoiDung.resources
 D:\LocalUserData\Desktop\NEU\QuanLyBanSach\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.view.FrmNhaXuatBan.resources
+D:\code\dotnet\BTL\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.view.FrmNguoiDung.resources
+D:\code\dotnet\BTL\QuanLyBanSach\QuanLyBanSach\obj\Debug\QuanLyBanSach.view.FrmNhaXuatBan.resources
