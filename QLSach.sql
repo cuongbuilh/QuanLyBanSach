@@ -56,7 +56,7 @@ create table DangNhap(
 create table DonHang(
     MaDonHang integer primary key identity(1,1),
     MaNguoiDung integer references NguoiDung(MaNguoiDung),
-    NgayTao date default(getdate())
+    NgayTao datetime default(getdate())
 );
 
 create table ChiTietDonHang(
@@ -74,7 +74,7 @@ insert into sach(TenSach, MaNXB, MaTacGia ,GiaBia, GiaBan , NamXuatBan, MaLoai) 
 insert into Quyen(TenQuyen) values('admin');
 insert into NguoiDung(TenNguoiDung,Email,SDT,DiaChi) values('admin', 'admin', '0000000000', 'admin');
 insert into DangNhap(TenDangNhap, MatKhau, MaNguoiDung, MaQuyen) values ('admin','admin',1,1);
-insert into DonHang( MaNguoiDung) values (1);
+insert into DonHang( MaNguoiDung,NgayTao) values (1);
 insert into ChiTietDonHang(MaDonHang,MaSach,SoLuong) values (1,1,10);
 
 

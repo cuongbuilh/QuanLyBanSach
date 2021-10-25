@@ -116,6 +116,8 @@ namespace QuanLyBanSach.view
 
         private void mnu_DangXuat_Click(object sender, EventArgs e)
         {
+            LOGIN_USER.TENNGUOIDUNG = "";
+            LOGIN_USER.MANGUOIDUNG = 0;
             new FrmDangNhap().Show();
             this.Hide();
         }

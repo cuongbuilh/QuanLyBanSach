@@ -38,9 +38,6 @@ namespace QuanLyBanSach.view
             data_DonHang.DataSource =
                 adoUtils.GetDataTable(
                     "select NgayTao, MaNguoiDung , ct.MaDonHang as MaDon, ct.MaSach as MaSach, s.TenSach as TenSach, SoLuong, giabia, giaban from DONHANG dh, Sach s, ChiTietDonHang ct where ct.MaDonHang = dh.MaDonHang and ct.MaSach = s.MaSach");
-
-            cbo_MaDon.DataSource = adoUtils.GetDataTable("select MaDonHang from DonHang ");
-            cbo_MaNguoiDung.DataSource = adoUtils.GetDataTable("select MaNguoiDung from NguoiDung");
         }
 
         private void BindingData()
@@ -51,67 +48,83 @@ namespace QuanLyBanSach.view
         {
             string search_key = txt_TimSach.Text;
             string prepare = "select MASACH, TENSACH from Sach where MaSach='{}' or TenSach = '{}';";
-            string sql = String.Format(prepare, search_key);
+            string sql = String.Format(prepare, search_key,search_key);
             data_Sach.DataSource = adoUtils.GetDataTable(sql);
         }
 
         private void btn_TaoDon_Click(object sender, EventArgs e)
         {
-            // string[] list_item = txt_DanhSach.Text.Split('\n');
-            // string[] list_amount = txt_SoLuong.Text.Split('\n');
-            // string maDonHang = txt_MaDon.Text;
-            // Dictionary<string, int> mapDictionary = new Dictionary<string, int>();
-            //
-            // for (var i = 0; i < list_item.Length; i++)
-            // {
-            //     if ((list_item[i].Trim() != "") && (list_amount[i].Trim() != ""))
-            //     {
-            //         string item = list_item[i].Trim();
-            //         int amount = Int32.Parse(list_amount[i].Trim());
-            //         string prepare = "insert into ChiTietDonHang values ('{0}','{1}',{2})";
-            //         string sql = String.Format(prepare, maDonHang, item, amount);
-            //         adoUtils.Excute(sql);
-            //     }
-            //
-            // }
-            //
-            // LoadDataToForm();
+            string[] list_item = txt_DanhSach.Text.Split('\n');
+            string[] list_amount = txt_SoLuong.Text.Split('\n');
+            
+            // tạo đơn hàng;
+            DateTime dateTimeNow = DateTime.Now;
+            string tao_don_prepare = "insert into DonHang(MaNguoiDung,NgayTao) values({0},'{1}')";
+            string tao_don_sql = String.Format(tao_don_prepare, LOGIN_USER.MANGUOIDUNG, dateTimeNow.ToString());
+            adoUtils.Excute(tao_don_sql);
+            // lấy mã đơn vừa tạo
+            string ma_don_prepare = "select MaDonHang from DonHang where MaNguoiDung = {0} and NgayTao = '{1}'";
+            string ma_don_sql = String.Format(ma_don_prepare, LOGIN_USER.MANGUOIDUNG, dateTimeNow.ToString());
+            SqlDataReader dataReader = adoUtils.ExcuteReader(ma_don_sql);
+            dataReader.Read();
+            int maDonHang = dataReader.GetInt32(0);
+
+            // insert chi tiet don hang
+            for (var i = 0; i < list_item.Length; i++)
+            {
+                if ((list_item[i].Trim() != "") && (list_amount[i].Trim() != ""))
+                {
+                    string item = list_item[i].Trim();
+                    int amount = Int32.Parse(list_amount[i].Trim());
+                    string prepare = "insert into ChiTietDonHang values ('{0}','{1}',{2})";
+                    string sql = String.Format(prepare, maDonHang, item, amount);
+                    adoUtils.Excute(sql);
+                }
+            
+            }
+            
+            LoadDataToForm();
         }
 
         private void btn_TimDon_Click(object sender, EventArgs e)
         {
-            // string maDon = txt_MaDon.Text;
-            // string maND = txt_MaNguoiDung.Text;
-            // string sql =
-            //     "select NgayTao, MaNguoiDung , ct.MaDonHang as MaDon, ct.MaSach as MaSach, s.TenSach as TenSach, SoLuong, giabia, giaban from DONHANG dh, Sach s, ChiTietDonHang ct where ct.MaDonHang = dh.MaDonHang and ct.MaSach = s.MaSach where true";
-            // if (maDon != "")
-            // {
-            //     sql = sql + "and MaDon = '" + maDon + "'";
-            // }
-            // if (maND != "")
-            // {
-            //     sql = sql + "and MaNguoiDung = '" + maND + "'";
-            // }
-            //
-            // data_DonHang.DataSource = adoUtils.GetDataTable(sql);
+            string maDon = txt_MaDon.Text;
+            string maND = txt_MaNguooiDung.Text;
+            string sql =
+                "select NgayTao, MaNguoiDung , ct.MaDonHang as MaDon, ct.MaSach as MaSach, s.TenSach as TenSach, SoLuong, giabia, giaban from DONHANG dh, Sach s, ChiTietDonHang ct where ct.MaDonHang = dh.MaDonHang and ct.MaSach = s.MaSach ";
+            if (maDon != "")
+            {
+                sql = sql + "and ct.MaDonHang = '" + maDon + "'";
+            }
+            if (maND != "")
+            {
+                sql = sql + "and MaNguoiDung = '" + maND + "'";
+            }
+            
+            data_DonHang.DataSource = adoUtils.GetDataTable(sql);
         }
 
         private void btn_XoaDon_Click(object sender, EventArgs e)
         {
-            // string maDon = txt_MaDon.Text;
-            // if (maDon == "")
-            // {
-            //     return;
-            // }
-            //
-            // if (MessageBox.Show("xóa đơn: " + maDon) == DialogResult.OK)
-            // {
-            //     string prepare = "delete from ChiTietDonHang where MaDonHang = '{0}'";
-            //     string sql = String.Format(prepare, maDon);
-            //     adoUtils.Excute(sql);
-            // }
-            //
-            // LoadDataToForm();
+            string maDon = txt_MaDon.Text;
+            if (maDon == "")
+            {
+                return;
+            }
+            
+            if (MessageBox.Show("xóa đơn: " + maDon, "thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                string prepare = "delete from ChiTietDonHang where MaDonHang = '{0}'";
+                string sql = String.Format(prepare, maDon);
+                adoUtils.Excute(sql);
+            }
+            
+            LoadDataToForm();
+        }
+
+        private void btn_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

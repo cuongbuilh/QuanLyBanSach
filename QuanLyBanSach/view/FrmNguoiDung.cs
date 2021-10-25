@@ -25,31 +25,41 @@ namespace QuanLyBanSach.view
             LoadDataToForm();
             BindingData();
 
+            txt_MaNguoiDung.Enabled = false;
+
             btn_Luu.Enabled = false;
         }
         private void LoadDataToForm()
         {
             view_NguoiDung.DataSource = adoUtils.GetDataTable("select * from NguoiDung");
+            BindingData();
         }
 
         private void BindingData()
         {
-            txt_TenNguoiDung.Clear();
-            txt_TenNguoiDung.DataBindings.Add("Text", view_NguoiDung.DataSource, "TenNguoiDung");
 
             txt_MaNguoiDung.Clear();
+            txt_MaNguoiDung.DataBindings.Clear();
             txt_MaNguoiDung.DataBindings.Add("Text", view_NguoiDung.DataSource, "MaNguoiDung");
 
+            txt_TenNguoiDung.Clear();
+            txt_TenNguoiDung.DataBindings.Clear();
+            txt_TenNguoiDung.DataBindings.Add("Text", view_NguoiDung.DataSource, "TenNguoiDung");
+
             txt_Email.Clear();
+            txt_Email.DataBindings.Clear();
             txt_Email.DataBindings.Add("Text", view_NguoiDung.DataSource, "Email");
 
             txt_NgayDangKy.Clear();
+            txt_NgayDangKy.DataBindings.Clear();
             txt_NgayDangKy.DataBindings.Add("Text", view_NguoiDung.DataSource, "NgayDangKy");
 
             txt_SoDienThoai.Clear();
+            txt_SoDienThoai.DataBindings.Clear();
             txt_SoDienThoai.DataBindings.Add("Text", view_NguoiDung.DataSource, "SDT");
 
             txt_DiaChi.Clear();
+            txt_DiaChi.DataBindings.Clear();
             txt_DiaChi.DataBindings.Add("Text", view_NguoiDung.DataSource, "DiaChi");
         }
 
@@ -69,13 +79,14 @@ namespace QuanLyBanSach.view
             string maNguoiDung = txt_MaNguoiDung.Text;
             string tenNguoiDung = txt_TenNguoiDung.Text;
             string email = txt_Email.Text;
-            string ngayDangKy = txt_NgayDangKy.Text;
+            DateTime dateTimeNow = DateTime.Now;
+           // string ngayDangKy = txt_NgayDangKy.Text;
             string soDienThoai = txt_SoDienThoai.Text;
             string diaChi = txt_DiaChi.Text;
 
             string prepare =
-                "insert into NhaXuatBan values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');";
-            string sql = String.Format(prepare, maNguoiDung, tenNguoiDung, email, ngayDangKy, soDienThoai, diaChi);
+                "insert into NguoiDung values ('{0}', '{1}', '{2}', '{3}');";
+            string sql = String.Format(prepare, tenNguoiDung, email, dateTimeNow, soDienThoai, diaChi);
 
             try
             {
@@ -91,7 +102,7 @@ namespace QuanLyBanSach.view
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            string maNguoiDung = txt_MaNguoiDung.Text;
+            int maNguoiDung = Int32.Parse(txt_MaNguoiDung.Text);
             string tenNguoiDung = txt_TenNguoiDung.Text;
             string email = txt_Email.Text;
             string ngayDangKy = txt_NgayDangKy.Text;
@@ -101,7 +112,7 @@ namespace QuanLyBanSach.view
             string prepapre =
                 "update NguoiDung set TenNguoiDung = '{0}', Email = '{1}', NgayDangKy = '{2}', SoDienThoai='{3}', DiaChi='{4}'  where MaNguoiDung='{5}' ;";
 
-            string sql = String.Format(prepapre, maNguoiDung, tenNguoiDung, email, ngayDangKy, soDienThoai, diaChi);
+            string sql = String.Format(prepapre, tenNguoiDung, email, ngayDangKy, soDienThoai, diaChi, maNguoiDung);
 
             try
             {
@@ -116,7 +127,7 @@ namespace QuanLyBanSach.view
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            string maNguoiDung = txt_MaNguoiDung.Text;
+            int maNguoiDung = Int32.Parse(txt_MaNguoiDung.Text);
             string prepare = "delete from NguoiDung where MaNguoiDung = '{0}'";
             string sql = String.Format(prepare, maNguoiDung);
 
@@ -125,6 +136,8 @@ namespace QuanLyBanSach.view
             {
                 try
                 {
+                    adoUtils.Disconnect();
+                    adoUtils.Connect();
                     adoUtils.Excute(sql);
                 }
                 catch (Exception exception)

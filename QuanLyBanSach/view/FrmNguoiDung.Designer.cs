@@ -30,8 +30,6 @@ namespace QuanLyBanSach.view
         private void InitializeComponent()
         {
             this.lbl_NguoiDung = new System.Windows.Forms.Label();
-            this.btn_TimKiem = new System.Windows.Forms.Button();
-            this.txt_TimKiem = new System.Windows.Forms.TextBox();
             this.view_NguoiDung = new System.Windows.Forms.DataGridView();
             this.lbl_TenNguoiDung = new System.Windows.Forms.Label();
             this.txt_TenNguoiDung = new System.Windows.Forms.TextBox();
@@ -64,31 +62,11 @@ namespace QuanLyBanSach.view
             this.lbl_NguoiDung.TabIndex = 0;
             this.lbl_NguoiDung.Text = "Người Dùng";
             // 
-            // btn_TimKiem
-            // 
-            this.btn_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TimKiem.Location = new System.Drawing.Point(582, 104);
-            this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(110, 36);
-            this.btn_TimKiem.TabIndex = 1;
-            this.btn_TimKiem.Text = "Tìm kiếm";
-            this.btn_TimKiem.UseVisualStyleBackColor = true;
-            // 
-            // txt_TimKiem
-            // 
-            this.txt_TimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TimKiem.Location = new System.Drawing.Point(536, 57);
-            this.txt_TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt_TimKiem.Name = "txt_TimKiem";
-            this.txt_TimKiem.Size = new System.Drawing.Size(199, 32);
-            this.txt_TimKiem.TabIndex = 2;
-            // 
             // view_NguoiDung
             // 
             this.view_NguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.view_NguoiDung.Location = new System.Drawing.Point(38, 346);
-            this.view_NguoiDung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_NguoiDung.Margin = new System.Windows.Forms.Padding(2);
             this.view_NguoiDung.Name = "view_NguoiDung";
             this.view_NguoiDung.RowHeadersWidth = 51;
             this.view_NguoiDung.RowTemplate.Height = 24;
@@ -110,7 +88,7 @@ namespace QuanLyBanSach.view
             // 
             this.txt_TenNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TenNguoiDung.Location = new System.Drawing.Point(206, 107);
-            this.txt_TenNguoiDung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_TenNguoiDung.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TenNguoiDung.Name = "txt_TenNguoiDung";
             this.txt_TenNguoiDung.Size = new System.Drawing.Size(272, 32);
             this.txt_TenNguoiDung.TabIndex = 5;
@@ -118,8 +96,8 @@ namespace QuanLyBanSach.view
             // btn_Them
             // 
             this.btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them.Location = new System.Drawing.Point(500, 155);
-            this.btn_Them.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Them.Location = new System.Drawing.Point(546, 52);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(110, 46);
             this.btn_Them.TabIndex = 6;
@@ -130,8 +108,8 @@ namespace QuanLyBanSach.view
             // btn_Luu
             // 
             this.btn_Luu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Luu.Location = new System.Drawing.Point(662, 155);
-            this.btn_Luu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Luu.Location = new System.Drawing.Point(546, 109);
+            this.btn_Luu.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(110, 46);
             this.btn_Luu.TabIndex = 6;
@@ -142,8 +120,8 @@ namespace QuanLyBanSach.view
             // btn_Xoa
             // 
             this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa.Location = new System.Drawing.Point(662, 226);
-            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Xoa.Location = new System.Drawing.Point(546, 209);
+            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(110, 46);
             this.btn_Xoa.TabIndex = 6;
@@ -154,8 +132,8 @@ namespace QuanLyBanSach.view
             // btn_Sua
             // 
             this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sua.Location = new System.Drawing.Point(500, 226);
-            this.btn_Sua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Sua.Location = new System.Drawing.Point(546, 159);
+            this.btn_Sua.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(110, 46);
             this.btn_Sua.TabIndex = 6;
@@ -167,7 +145,7 @@ namespace QuanLyBanSach.view
             // 
             this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Email.Location = new System.Drawing.Point(206, 155);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(272, 32);
             this.txt_Email.TabIndex = 8;
@@ -187,7 +165,7 @@ namespace QuanLyBanSach.view
             // 
             this.txt_NgayDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NgayDangKy.Location = new System.Drawing.Point(206, 204);
-            this.txt_NgayDangKy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NgayDangKy.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NgayDangKy.Name = "txt_NgayDangKy";
             this.txt_NgayDangKy.Size = new System.Drawing.Size(272, 32);
             this.txt_NgayDangKy.TabIndex = 10;
@@ -207,7 +185,7 @@ namespace QuanLyBanSach.view
             // 
             this.txt_MaNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MaNguoiDung.Location = new System.Drawing.Point(206, 59);
-            this.txt_MaNguoiDung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MaNguoiDung.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MaNguoiDung.Name = "txt_MaNguoiDung";
             this.txt_MaNguoiDung.Size = new System.Drawing.Size(272, 32);
             this.txt_MaNguoiDung.TabIndex = 12;
@@ -227,7 +205,7 @@ namespace QuanLyBanSach.view
             // 
             this.txt_SoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_SoDienThoai.Location = new System.Drawing.Point(206, 246);
-            this.txt_SoDienThoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_SoDienThoai.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SoDienThoai.Name = "txt_SoDienThoai";
             this.txt_SoDienThoai.Size = new System.Drawing.Size(272, 32);
             this.txt_SoDienThoai.TabIndex = 14;
@@ -247,7 +225,7 @@ namespace QuanLyBanSach.view
             // 
             this.txt_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DiaChi.Location = new System.Drawing.Point(206, 291);
-            this.txt_DiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_DiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Size = new System.Drawing.Size(272, 32);
             this.txt_DiaChi.TabIndex = 16;
@@ -266,8 +244,8 @@ namespace QuanLyBanSach.view
             // btn_Thoat
             // 
             this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Thoat.Location = new System.Drawing.Point(582, 283);
-            this.btn_Thoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Thoat.Location = new System.Drawing.Point(546, 271);
+            this.btn_Thoat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(110, 46);
             this.btn_Thoat.TabIndex = 17;
@@ -298,10 +276,8 @@ namespace QuanLyBanSach.view
             this.Controls.Add(this.txt_TenNguoiDung);
             this.Controls.Add(this.lbl_TenNguoiDung);
             this.Controls.Add(this.view_NguoiDung);
-            this.Controls.Add(this.txt_TimKiem);
-            this.Controls.Add(this.btn_TimKiem);
             this.Controls.Add(this.lbl_NguoiDung);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmNguoiDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Người Dùng";
@@ -315,8 +291,6 @@ namespace QuanLyBanSach.view
         #endregion
 
         private System.Windows.Forms.Label lbl_NguoiDung;
-        private System.Windows.Forms.Button btn_TimKiem;
-        private System.Windows.Forms.TextBox txt_TimKiem;
         private System.Windows.Forms.DataGridView view_NguoiDung;
         private System.Windows.Forms.Label lbl_TenNguoiDung;
         private System.Windows.Forms.TextBox txt_TenNguoiDung;
