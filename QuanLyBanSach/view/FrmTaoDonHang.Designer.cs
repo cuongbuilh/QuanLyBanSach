@@ -67,9 +67,9 @@ namespace QuanLyBanSach.view
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(97, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 24);
+            this.label1.Size = new System.Drawing.Size(84, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Danh Sách";
+            this.label1.Text = "Mã Sách";
             // 
             // label2
             // 
@@ -86,15 +86,15 @@ namespace QuanLyBanSach.view
             this.data_Sach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_Sach.Location = new System.Drawing.Point(22, 285);
             this.data_Sach.Name = "data_Sach";
-            this.data_Sach.Size = new System.Drawing.Size(178, 150);
+            this.data_Sach.Size = new System.Drawing.Size(220, 150);
             this.data_Sach.TabIndex = 3;
             // 
             // data_DonHang
             // 
             this.data_DonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_DonHang.Location = new System.Drawing.Point(231, 285);
+            this.data_DonHang.Location = new System.Drawing.Point(273, 285);
             this.data_DonHang.Name = "data_DonHang";
-            this.data_DonHang.Size = new System.Drawing.Size(557, 150);
+            this.data_DonHang.Size = new System.Drawing.Size(515, 150);
             this.data_DonHang.TabIndex = 4;
             // 
             // btn_TaoDon
@@ -110,7 +110,7 @@ namespace QuanLyBanSach.view
             // 
             // btn_TimSach
             // 
-            this.btn_TimSach.Location = new System.Drawing.Point(124, 241);
+            this.btn_TimSach.Location = new System.Drawing.Point(167, 243);
             this.btn_TimSach.Name = "btn_TimSach";
             this.btn_TimSach.Size = new System.Drawing.Size(75, 23);
             this.btn_TimSach.TabIndex = 6;
@@ -122,7 +122,7 @@ namespace QuanLyBanSach.view
             // 
             this.txt_TimSach.Location = new System.Drawing.Point(22, 243);
             this.txt_TimSach.Name = "txt_TimSach";
-            this.txt_TimSach.Size = new System.Drawing.Size(100, 20);
+            this.txt_TimSach.Size = new System.Drawing.Size(139, 20);
             this.txt_TimSach.TabIndex = 7;
             this.txt_TimSach.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -130,7 +130,7 @@ namespace QuanLyBanSach.view
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 216);
+            this.label3.Location = new System.Drawing.Point(128, 214);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 24);
             this.label3.TabIndex = 1;
