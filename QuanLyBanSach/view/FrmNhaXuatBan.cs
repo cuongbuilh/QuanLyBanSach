@@ -24,25 +24,30 @@ namespace QuanLyBanSach.view
         private void FrmNhaXuatBan_Load(object sender, EventArgs e)
         {
             LoadDataToForm();
-            BindingData();
 
-            //btn_Luu.Enabled = false;
+            txt_MaNXB.Enabled = false;
+
+            btn_Luu.Enabled = false;
         }
 
         private void LoadDataToForm()
         {
-            view_NhaXuatBan.DataSource = adoUtils.GetDataTable("select * from NhaXuatBan");
+            view_NhaXuatBan.DataSource = adoUtils.GetDataTable("select * from Quyen");
+            BindingData();
         }
 
         private void BindingData()
         {
+            txt_MaNXB.Clear();
+            txt_MaNXB.DataBindings.Clear();
+            txt_MaNXB.DataBindings.Add("Value", view_NhaXuatBan.DataSource, "MaNXB");
+
             txt_TenNXB.Clear();
+            txt_TenNXB.DataBindings.Clear();
             txt_TenNXB.DataBindings.Add("Text", view_NhaXuatBan.DataSource, "TenNXB");
 
-            txt_MaNXB.Clear();
-            txt_MaNXB.DataBindings.Add("Text", view_NhaXuatBan.DataSource, "MaNXB");
-
             txt_DiaChi.Clear();
+            txt_DiaChi.DataBindings.Clear();
             txt_DiaChi.DataBindings.Add("Text", view_NhaXuatBan.DataSource, "DiaChi");
         }
 
@@ -51,17 +56,17 @@ namespace QuanLyBanSach.view
             txt_MaNXB.Text = "";
             txt_TenNXB.Text = "";
             txt_DiaChi.Text = "";
+            btn_Luu.Enabled = true;
         }
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            string maNXB = txt_MaNXB.Text;
-            string tenNXB = txt_TenNXB.Text;
-            string diaChi = txt_DiaChi.Text;
+            string maQuyen = txt_MaNXB.Text;
+            string tenQuyen = txt_TenNXB.Text;
 
             string prepare =
-                "insert into NhaXuatBan(TenNXB, DiaChi) values('Kim Dong', 'Ha noi');";
-            string sql = String.Format(prepare, maNXB, tenNXB, diaChi);
+                "insert into NhaXuatBan(TenNXB) values('{0}');";
+            string sql = String.Format(prepare, tenQuyen);
 
             try
             {
@@ -77,14 +82,13 @@ namespace QuanLyBanSach.view
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            string maNXB = txt_MaNXB.Text;
+            int maNXB = Int32.Parse(txt_MaNXB.Text);
             string tenNXB = txt_TenNXB.Text;
-            string diaChi = txt_DiaChi.Text;
 
             string prepapre =
-                "update NguoiDung set TenNXB = '{0}', DiaChi = '{1}' where MaNXB='{2}' ;";
+                "update NhaXuatBan set TenNXB = '{0}' where MaNXB={1} ;";
 
-            string sql = String.Format(prepapre, maNXB, tenNXB, diaChi);
+            string sql = String.Format(prepapre, tenNXB, maNXB);
 
             try
             {
@@ -99,15 +103,17 @@ namespace QuanLyBanSach.view
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            string maNXB = txt_MaNXB.Text;
-            string prepare = "delete from NhaXuatBan where MaNXB = '{0}'";
-            string sql = String.Format(prepare, maNXB);
+            string tenNXB = txt_TenNXB.Text;
+            string prepare = "delete from NhaXuatBan where TenNXB = '{0}'";
+            string sql = String.Format(prepare, tenNXB);
 
-            DialogResult confirmDialogResult = MessageBox.Show("Bạn muốn xóa mã NXB " + maNXB);
+            DialogResult confirmDialogResult = MessageBox.Show("Bạn muốn xóa NXB " + tenNXB);
             if (confirmDialogResult == DialogResult.OK)
             {
                 try
                 {
+                    adoUtils.Disconnect();
+                    adoUtils.Connect();
                     adoUtils.Excute(sql);
                 }
                 catch (Exception exception)
